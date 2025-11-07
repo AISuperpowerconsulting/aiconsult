@@ -627,6 +627,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            order: -1; /* Show image first on desktop */
         }
 
         .intro-image img {
@@ -1091,6 +1092,7 @@
 
             .intro-image {
                 height: 400px;
+                order: 0; /* Show image after text on mobile */
             }
 
             .training-header-grid {

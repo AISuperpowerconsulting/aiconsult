@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <!-- White background -->
+  <rect width="600" height="300" fill="#ffffff"/>
+  
+  <!-- Stars -->
+  <g transform="translate(50, 150)">
+    <polygon points="0,-20 5,-5 20,-5 8,5 12,20 0,10 -12,20 -8,5 -20,-5 -5,-5" fill="#000000"/>
+  </g>
+  <g transform="translate(90, 120)">
+    <polygon points="0,-15 4,-4 15,-4 6,4 9,15 0,8 -9,15 -6,4 -15,-4 -4,-4" fill="#000000"/>
+  </g>
+  <g transform="translate(120, 90)">
+    <polygon points="0,-12 3,-3 12,-3 5,3 7,12 0,6 -7,12 -5,3 -12,-3 -3,-3" fill="#000000"/>
+  </g>
+  
+  <!-- A with gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00CED1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7FFF00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <text x="200" y="200" font-family="Arial Black, sans-serif" font-size="120" font-weight="bold" fill="url(#grad1)">A</text>
+  
+  <!-- I with gradient -->
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF69B4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF1493;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <text x="330" y="200" font-family="Arial Black, sans-serif" font-size="120" font-weight="bold" fill="url(#grad2)">I</text>
+  
+  <!-- C in black -->
+  <text x="420" y="200" font-family="Arial Black, sans-serif" font-size="120" font-weight="bold" fill="#000000">C</text>
+</svg>

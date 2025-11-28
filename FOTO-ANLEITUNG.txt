@@ -1,0 +1,29 @@
+ANLEITUNG: Dein Foto einfügen
+================================
+
+SCHRITT 1: Foto speichern
+--------------------------
+1. Öffne das blaue Portrait-Foto das du mir geschickt hast
+2. Speichere es als JPG oder PNG
+3. Speichere es HIER:
+   C:\Users\dd\OneDrive\Desktop\Phyton\aiconsult-redesign\public\images\adrian-foto.jpg
+
+SCHRITT 2: Automatisch im HTML eingefügt
+-----------------------------------------
+Das Foto wird automatisch an 2 Stellen angezeigt:
+- Hero-Bereich (große Ansicht rechts)
+- Über mich Sektion
+
+SCHNELL-ANLEITUNG:
+------------------
+1. Rechtsklick auf dein blaues Foto → "Speichern unter"
+2. Navigiere zu: Desktop\Phyton\aiconsult-redesign\public\images\
+3. Speichere als: adrian-foto.jpg
+4. Öffne wordpress-final.html neu im Browser
+5. Fertig!
+
+AKTUELLER STATUS:
+-----------------
+✓ Logo 50% größer gemacht
+✓ Logo wird korrekt angezeigt
+✗ Foto fehlt noch (bitte speichern wie oben beschrieben)

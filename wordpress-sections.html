@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIConsult.ch - KI-Beratung für Schweizer KMU</title>
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #046bd2;
+            --dark-slate: #1e293b;
+            --medium-slate: #334155;
+            --light-bg: #F0F5FA;
+            --white: #FFFFFF;
+            --gradient-start: #0ea5e9;
+            --gradient-end: #06b6d4;
+            --success-green: #10b981;
+            --warning-orange: #f59e0b;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-slate);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+            background-size: 50px 50px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 16px;
+            opacity: 0.95;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-blue);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--dark-slate);
+            color: white;
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .trust-icon {
+            font-size: 1.5rem;
+        }
+
+        .trust-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* ===== ABOUT/FOUNDER SECTION ===== */
+        .founder-section {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .founder-image {
+            position: relative;
+        }
+
+        .founder-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .founder-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .founder-badge-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            line-height: 1;
+        }
+
+        .founder-badge-text {
+            font-size: 0.875rem;
+            color: var(--medium-slate);
+        }
+
+        .founder-text h2 {
+            font-size: 2.5rem;
+            color: var(--dark-slate);
+            margin-bottom: 24px;
+        }
+
+        .founder-text h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .founder-text p {
+            font-size: 1.125rem;
+            color: var(--medium-slate);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .credentials {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .credential-badge {
+            background: var(--light-bg);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        /* ===== PROBLEM-SOLUTION SECTION ===== */
+        .problem-solution {
+            padding: 80px 20px;
+            background: var(--light-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark-slate);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: var(--medium-slate);
+        }
+
+        .ps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .ps-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .ps-card.problem {
+            border-left: 4px solid #ef4444;
+        }
+
+        .ps-card.solution {
+            border-left: 4px solid var(--success-green);
+        }
+
+        .ps-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ps-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ps-card li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+            font-size: 1.0625rem;
+            color: var(--medium-slate);
+        }
+
+        .ps-card.problem li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        .ps-card.solution li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+            font-weight: bold;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid var(--light-bg);
+            border-radius: 16px;
+            padding: 40px 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(4, 107, 210, 0.15);
+            border-color: var(--primary-blue);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-slate);
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            color: var(--medium-slate);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .service-card .price {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-top: 20px;
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials-section {
+            padding: 80px 20px;
+            background: var(--light-bg);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 1100px;
+            margin: 60px auto 0;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .testimonial-text {
+            font-size: 1.0625rem;
+            color: var(--medium-slate);
+            margin-bottom: 24px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .author-info h4 {
+            font-size: 1.125rem;
+            color: var(--dark-slate);
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            font-size: 0.9375rem;
+            color: var(--medium-slate);
+        }
+
+        /* ===== CASE STUDY SECTION ===== */
+        .case-study {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .case-study-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 16px;
+            padding: 60px;
+            max-width: 1100px;
+            margin: 60px auto 0;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .case-study-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .case-study-header h3 {
+            font-size: 2rem;
+            color: var(--dark-slate);
+            margin-bottom: 16px;
+        }
+
+        .case-study-header .company {
+            font-size: 1.125rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 24px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--success-green);
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: var(--medium-slate);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--dark-slate) 0%, var(--medium-slate) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .cta-content p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+
+        .cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.125rem;
+        }
+
+        .cta-feature-icon {
+            color: var(--success-green);
+            font-size: 1.5rem;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 60px auto 0;
+        }
+
+        .contact-info h3 {
+            font-size: 1.75rem;
+            color: var(--dark-slate);
+            margin-bottom: 24px;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateX(8px);
+        }
+
+        .contact-method-icon {
+            font-size: 1.5rem;
+        }
+
+        .contact-method-text {
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        .contact-form {
+            background: var(--light-bg);
+            padding: 40px;
+            border-radius: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-slate);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background: #0355a8;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+
+            .founder-content,
+            .ps-grid,
+            .services-grid,
+            .testimonials-grid,
+            .case-metrics,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .trust-items {
+                gap: 24px;
+            }
+
+            .section-header h2,
+            .founder-text h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">KI-Beratung für Schweizer KMU</h1>
+            <p class="hero-subtitle">Sparen Sie Zeit und Kosten mit massgeschneiderter KI-Integration</p>
+            <p class="hero-description">
+                Als Ihr persönlicher KI-Berater helfe ich Ihrem Unternehmen, künstliche Intelligenz
+                gewinnbringend einzusetzen – ohne komplizierte Technik, mit messbaren Resultaten.
+            </p>
+            <div class="cta-buttons">
+                <a href="#kontakt" class="btn btn-primary">
+                    <span>📞</span> Kostenloses Erstgespräch buchen
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    Leistungen entdecken
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="trust-items">
+            <div class="trust-item">
+                <span class="trust-icon">✓</span>
+                <span class="trust-text">Schweizer Qualität</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">🔒</span>
+                <span class="trust-text">DSGVO-konform</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">⚡</span>
+                <span class="trust-text">Schnelle Umsetzung</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-icon">💼</span>
+                <span class="trust-text">KMU-spezialisiert</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOUNDER/ABOUT SECTION -->
+    <section class="founder-section" id="ueber-mich">
+        <div class="founder-content">
+            <div class="founder-image">
+                <img src="https://via.placeholder.com/400x500/5470B5/FFFFFF?text=Adrian+Althaus" alt="Adrian Althaus - KI-Berater">
+                <div class="founder-badge">
+                    <div class="founder-badge-number">20+</div>
+                    <div class="founder-badge-text">Jahre Erfahrung</div>
+                </div>
+            </div>
+            <div class="founder-text">
+                <h2>Ihr persönlicher KI-Partner</h2>
+                <h3>Hallo, ich bin Adrian Althaus</h3>
+                <p>
+                    Mit über 20 Jahren Erfahrung im Product Management und Sales bei Samsung Electronics
+                    habe ich gelernt, wie man komplexe Technologien erfolgreich in den Markt bringt.
+                    Als Head of Product Management verantwortete ich ein Business-Volumen von 190 Millionen Dollar
+                    und führte die Premium-Transformation zur Nr. 1 Position in Europa.
+                </p>
+                <p>
+                    <strong>Meine Mission:</strong> Diese Expertise nutze ich jetzt, um Schweizer KMU dabei zu helfen,
+                    künstliche Intelligenz gewinnbringend einzusetzen – ohne Fachchinesisch, ohne teure IT-Projekte,
+                    sondern mit praktischen Lösungen aus der Unternehmenspraxis, die sofort Mehrwert schaffen.
+                </p>
+                <div class="credentials">
+                    <span class="credential-badge">🎓 Marketing & Sales Diploma AKAD</span>
+                    <span class="credential-badge">🏆 Cambridge Certificate Advanced English</span>
+                    <span class="credential-badge">💼 Unternehmer AlcFree.ch</span>
+                    <span class="credential-badge">📊 20+ Jahre Samsung Electronics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM-SOLUTION SECTION -->
+    <section class="problem-solution">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kennen Sie das?</h2>
+                <p>Viele KMU stehen vor denselben Herausforderungen mit KI</p>
+            </div>
+            <div class="ps-grid">
+                <div class="ps-card problem">
+                    <h3><span>❌</span> Ohne AIConsult.ch</h3>
+                    <ul>
+                        <li>Überforderung durch zu viele KI-Tools</li>
+                        <li>Keine Zeit, sich in neue Technologien einzuarbeiten</li>
+                        <li>Angst vor hohen Kosten ohne klaren Nutzen</li>
+                        <li>Repetitive Aufgaben fressen wertvolle Zeit</li>
+                        <li>Konkurrenz nutzt bereits KI-Vorteile</li>
+                        <li>Fachkräftemangel erschwert Wachstum</li>
+                    </ul>
+                </div>
+                <div class="ps-card solution">
+                    <h3><span>✓</span> Mit AIConsult.ch</h3>
+                    <ul>
+                        <li>Klare Empfehlung: Die richtigen Tools für Ihr Business</li>
+                        <li>Massgeschneiderte Schulung Ihres Teams</li>
+                        <li>ROI-Garantie: Nur Lösungen mit messbarem Nutzen</li>
+                        <li>Automatisierung spart bis zu 10h/Woche</li>
+                        <li>Wettbewerbsvorsprung durch intelligente Prozesse</li>
+                        <li>Mehr Zeit für strategische Aufgaben</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>So helfe ich Ihrem Unternehmen</h2>
+                <p>Transparente Pakete – von der ersten Analyse bis zur vollständigen Implementierung</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>KI-Potenzialanalyse</h3>
+                    <p>
+                        Gemeinsam identifizieren wir die grössten Zeitfresser und Optimierungspotenziale
+                        in Ihrem Unternehmen.
+                    </p>
+                    <p><strong>Inklusiv:</strong></p>
+                    <ul style="text-align: left; padding-left: 20px; margin: 16px 0;">
+                        <li>90-minütiges Analysegespräch</li>
+                        <li>Prozess-Dokumentation</li>
+                        <li>Handlungsempfehlungen</li>
+                    </ul>
+                    <div class="price">Ab CHF 490.–</div>
+                    <a href="#kontakt" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Jetzt buchen</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>KI-Integration</h3>
+                    <p>
+                        Ich implementiere die passenden KI-Tools direkt in Ihre bestehenden Systeme
+                        und schule Ihr Team.
+                    </p>
+                    <p><strong>Inklusiv:</strong></p>
+                    <ul style="text-align: left; padding-left: 20px; margin: 16px 0;">
+                        <li>Tool-Auswahl & Setup</li>
+                        <li>Mitarbeiter-Schulung (2h)</li>
+                        <li>30 Tage Support</li>
+                    </ul>
+                    <div class="price">Ab CHF 1'490.–</div>
+                    <a href="#kontakt" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Anfragen</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Individuelle Automatisierung</h3>
+                    <p>
+                        Massgeschneiderte KI-Lösungen für spezifische Herausforderungen –
+                        von Chatbots bis zu kompletten Workflows.
+                    </p>
+                    <p><strong>Inklusiv:</strong></p>
+                    <ul style="text-align: left; padding-left: 20px; margin: 16px 0;">
+                        <li>Custom-Entwicklung</li>
+                        <li>Umfangreiche Schulung</li>
+                        <li>90 Tage Premium-Support</li>
+                    </ul>
+                    <div class="price">Auf Anfrage</div>
+                    <a href="#kontakt" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Beratung anfragen</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Das sagen meine Kunden</h2>
+                <p>Erfolgsgeschichten von Schweizer KMU</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "Dank der KI-Integration sparen wir 8 Stunden pro Woche bei der Angebotserstellung.
+                        Die Investition hat sich bereits nach 6 Wochen amortisiert!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <h4>Michael K.</h4>
+                            <p>Geschäftsführer, Handwerksbetrieb</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "Endlich jemand, der KI verständlich erklärt! Die Schulung war praxisnah,
+                        und unser Team nutzt die Tools jetzt täglich."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sandra M.</h4>
+                            <p>Marketing-Leiterin, E-Commerce</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "Der KI-Chatbot auf unserer Website beantwortet 70% der Kundenanfragen automatisch.
+                        Wir können uns jetzt auf komplexere Beratungen konzentrieren."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TH</div>
+                        <div class="author-info">
+                            <h4>Thomas H.</h4>
+                            <p>Inhaber, IT-Dienstleister</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">
+                        "Professionelle Beratung mit echtem Mehrwert. Die vorgeschlagenen Lösungen
+                        waren genau auf unsere Bedürfnisse zugeschnitten."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">LB</div>
+                        <div class="author-info">
+                            <h4>Laura B.</h4>
+                            <p>Geschäftsführerin, Treuhandbüro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY SECTION -->
+    <section class="case-study">
+        <div class="container">
+            <div class="section-header">
+                <h2>Erfolgsbeispiel aus der Praxis</h2>
+            </div>
+            <div class="case-study-card">
+                <div class="case-study-header">
+                    <h3>KI-gestützte Kundenbetreuung für Online-Shop</h3>
+                    <p class="company">Schweizer E-Commerce Unternehmen mit 15 Mitarbeitern</p>
+                </div>
+                <p style="font-size: 1.125rem; color: var(--medium-slate); margin-bottom: 32px; line-height: 1.8;">
+                    <strong>Herausforderung:</strong> Der Kundenservice war überlastet mit repetitiven Fragen
+                    zu Versand, Retouren und Produkten. Die Reaktionszeit lag bei über 24 Stunden.
+                </p>
+                <p style="font-size: 1.125rem; color: var(--medium-slate); margin-bottom: 32px; line-height: 1.8;">
+                    <strong>Lösung:</strong> Implementierung eines KI-Chatbots mit Anbindung an das Warenwirtschaftssystem
+                    und automatisierten E-Mail-Antworten für häufige Anfragen.
+                </p>
+                <div class="case-metrics">
+                    <div class="metric">
+                        <div class="metric-value">70%</div>
+                        <div class="metric-label">Weniger Anfragen im Support</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">< 2 Min</div>
+                        <div class="metric-label">Durchschnittliche Reaktionszeit</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">15h</div>
+                        <div class="metric-label">Zeit gespart pro Woche</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Bereit für den nächsten Schritt?</h2>
+            <p>
+                Buchen Sie jetzt Ihr kostenloses 30-minütiges Erstgespräch und erfahren Sie,
+                wie KI Ihr Unternehmen voranbringen kann.
+            </p>
+            <div class="cta-buttons">
+                <a href="tel:+41797401021" class="btn btn-primary">
+                    <span>📞</span> 079 740 10 21
+                </a>
+                <a href="#kontakt" class="btn btn-secondary">
+                    Kontaktformular
+                </a>
+            </div>
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <span class="cta-feature-icon">✓</span>
+                    <span>Unverbindlich</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="cta-feature-icon">✓</span>
+                    <span>Kostenlos</span>
+                </div>
+                <div class="cta-feature">
+                    <span class="cta-feature-icon">✓</span>
+                    <span>30 Minuten</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="kontakt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kontakt aufnehmen</h2>
+                <p>Ich freue mich auf Ihre Nachricht!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Direkter Kontakt</h3>
+                    <div class="contact-methods">
+                        <a href="tel:+41797401021" class="contact-method">
+                            <span class="contact-method-icon">📞</span>
+                            <span class="contact-method-text">079 740 10 21</span>
+                        </a>
+                        <a href="mailto:aalthaus44@gmail.com" class="contact-method">
+                            <span class="contact-method-icon">✉️</span>
+                            <span class="contact-method-text">aalthaus44@gmail.com</span>
+                        </a>
+                        <div class="contact-method">
+                            <span class="contact-method-icon">📍</span>
+                            <span class="contact-method-text">Brandstrasse 25, 8952 Schlieren</span>
+                        </div>
+                    </div>
+                    <h3 style="margin-top: 40px;">Öffnungszeiten</h3>
+                    <p style="font-size: 1.0625rem; color: var(--medium-slate); margin-top: 16px;">
+                        Montag - Freitag: 09:00 - 18:00 Uhr<br>
+                        Termine auch ausserhalb der Bürozeiten nach Vereinbarung möglich.
+                    </p>
+                </div>
+                <div class="contact-form">
+                    <form action="/kontakt" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Unternehmen</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interesse an</label>
+                            <select id="interest" name="interest">
+                                <option value="">Bitte wählen...</option>
+                                <option value="analyse">KI-Potenzialanalyse</option>
+                                <option value="integration">KI-Integration</option>
+                                <option value="automatisierung">Individuelle Automatisierung</option>
+                                <option value="beratung">Allgemeine Beratung</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Ihre Nachricht *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">
+                            Nachricht senden
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORDPRESS USAGE INSTRUCTIONS -->
+    <!--
+    ========================================
+    WORDPRESS INTEGRATION GUIDE
+    ========================================
+
+    To use these sections in WordPress:
+
+    1. COPY THE CSS:
+       - Copy all styles from the <style> tag
+       - Add to: Appearance > Customize > Additional CSS
+       - OR use a child theme's style.css
+
+    2. ADD SECTIONS TO PAGES:
+       - Create a new page or edit existing
+       - Switch to "Code Editor" or use HTML blocks
+       - Copy individual sections (e.g., .hero-section, .services-section)
+       - Paste into your page
+
+    3. CUSTOMIZE CONTENT:
+       - Replace placeholder text with your actual content
+       - Add your photo in the founder section
+       - Update phone numbers, emails, and addresses
+       - Modify service packages and prices
+       - Add real testimonials with customer names
+
+    4. FORMS:
+       - Replace the form action="/kontakt" with your actual form handler
+       - Consider using Contact Form 7 or WPForms plugin
+       - Integrate with your preferred email service
+
+    5. RESPONSIVE DESIGN:
+       - All sections are mobile-responsive
+       - Test on different devices
+       - Adjust breakpoints if needed
+
+    6. LOGO INTEGRATION:
+       - Upload your logos to Media Library
+       - Replace placeholder logo paths
+       - Use the provided logo files in the /logos directory
+
+    ========================================
+    -->
+
+</body>
+</html>

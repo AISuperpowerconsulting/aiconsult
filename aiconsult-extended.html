@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWISS AI CONSULTING - KI-Beratung für messbare Resultate | Adrian Althaus</title>
+    <meta name="description" content="SWISS AI CONSULTING: Entwickeln Sie Ihre Mitarbeitenden von KI-Neulingen zu KI-Experten. KI-Beratung für Schweizer KMU mit 20+ Jahren Erfahrung in Sales, Marketing und Operations.">
+
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="KI Beratung KMU, KI-Schulungen Unternehmen, Künstliche Intelligenz im Mittelstand, KI für B2B und B2C, Dienstleistungsbranche KI nutzen, FMCG und KI-Tools, Investitionsgüter und KI, KI im Marketing und Vertrieb, ChatGPT Workshop Schweiz, KI-Strategie Beratung, Künstliche Intelligenz Beratung für kleine und mittlere Unternehmen, KI-Einführung KMU, KI-Integration KMU, KI-Anwendungen für Dienstleistungsunternehmen, KI-Integration in Konsumgüter Unternehmen, KI in der Produktion, KI-gestützte Automatisierung Marketing, Schulung ChatGPT Unternehmen, KI-Strategieentwicklung Firmen">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="SWISS AI CONSULTING - KI-Beratung für messbare Resultate">
+    <meta property="og:description" content="Entwickeln Sie Ihre Mitarbeitenden von KI-Neulingen zu KI-Experten. Praxisorientierte KI-Schulungen für Schweizer KMU.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ENTERPRISE DESIGN SYSTEM ===== */
+        :root {
+            /* Enterprise Color System */
+            --primary-black: #000000;
+            --primary-navy: #0A1628;
+            --primary-grey: #2e2e38;
+            --accent-yellow: #FFE600;
+            --accent-blue: #046bd2;
+            --accent-cyan: #00B8D4;
+
+            /* Logo Gradient Colors */
+            --logo-gradient: linear-gradient(135deg, #00CED1 0%, #7FFF00 25%, #FF69B4 75%, #FF1493 100%);
+            --logo-cyan: #00CED1;
+            --logo-green: #7FFF00;
+            --logo-pink: #FF69B4;
+            --logo-magenta: #FF1493;
+
+            /* Neutral Scale */
+            --grey-50: #f8fafc;
+            --grey-100: #f1f5f9;
+            --grey-200: #e2e8f0;
+            --grey-300: #cbd5e1;
+            --grey-400: #94a3b8;
+            --grey-500: #64748b;
+            --grey-600: #475569;
+            --grey-700: #334155;
+            --grey-800: #1e293b;
+            --grey-900: #0f172a;
+
+            /* Spacing System */
+            --space-2xs: 0.25rem;
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            --space-5xl: 8rem;
+
+            /* Typography Scale */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+            --text-6xl: 3.75rem;
+            --text-7xl: 4.5rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: var(--text-base);
+            line-height: 1.6;
+            color: var(--primary-grey);
+            background: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IBM Plex Sans', 'Inter', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--primary-black);
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-2xl);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--space-lg);
+            }
+        }
+
+        /* ===== NAVIGATION ===== */
+        .enterprise-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--grey-200);
+            z-index: 9999;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .enterprise-nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-2xl);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 68px;
+        }
+
+        .nav-logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: var(--space-2xl);
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--primary-grey);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            letter-spacing: 0.01em;
+            transition: color 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-black);
+        }
+
+        .nav-cta-btn {
+            padding: 0.75rem 1.75rem;
+            background: linear-gradient(45deg,
+                var(--logo-cyan) 0%,
+                var(--logo-green) 25%,
+                var(--logo-pink) 50%,
+                var(--logo-magenta) 75%,
+                var(--logo-cyan) 100%
+            );
+            background-size: 300% 300%;
+            color: white;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: var(--text-sm);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 14px rgba(0, 206, 209, 0.3);
+            animation: gradient-shift 8s ease infinite;
+        }
+
+        .nav-cta-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 206, 209, 0.4);
+            animation: gradient-shift 4s ease infinite;
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ===== HERO SECTION ===== */
+        .enterprise-hero {
+            min-height: calc(100vh - 80px);
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: var(--space-4xl);
+            padding: var(--space-5xl) 0;
+            background: linear-gradient(135deg, #ffffff 0%, var(--grey-50) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enterprise-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(4, 107, 210, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content-enterprise {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-md);
+            background: var(--grey-100);
+            border-radius: 50px;
+            font-size: var(--text-xs);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-grey);
+            margin-bottom: var(--space-xl);
+        }
+
+        .hero-title-enterprise {
+            font-size: clamp(var(--text-4xl), 5vw, var(--text-7xl));
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: var(--space-xl);
+            color: var(--primary-black);
+            letter-spacing: -0.03em;
+        }
+
+        .hero-title-enterprise .highlight {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title-enterprise .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: 0;
+            right: 0;
+            height: 0.15em;
+            background: var(--logo-gradient);
+            z-index: -1;
+        }
+
+        .hero-subtitle-enterprise {
+            font-size: var(--text-xl);
+            line-height: 1.6;
+            color: var(--grey-600);
+            margin-bottom: var(--space-2xl);
+            max-width: 700px;
+            font-weight: 400;
+        }
+
+        .hero-cta-enterprise {
+            display: flex;
+            gap: var(--space-lg);
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-enterprise {
+            padding: 1.125rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: var(--text-base);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-sm);
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            background-size: 200% 200%;
+        }
+
+        .btn-primary-enterprise {
+            background: linear-gradient(45deg,
+                var(--logo-cyan) 0%,
+                var(--logo-green) 25%,
+                var(--logo-pink) 50%,
+                var(--logo-magenta) 75%,
+                var(--logo-cyan) 100%
+            );
+            background-size: 300% 300%;
+            color: white;
+            animation: gradient-shift 8s ease infinite;
+            box-shadow: 0 4px 14px rgba(0, 206, 209, 0.4);
+        }
+
+        .btn-primary-enterprise:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 206, 209, 0.5);
+            animation: gradient-shift 4s ease infinite;
+        }
+
+        .btn-secondary-enterprise {
+            background: white;
+            color: var(--primary-black);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary-enterprise::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg,
+                var(--logo-cyan) 0%,
+                var(--logo-green) 25%,
+                var(--logo-pink) 50%,
+                var(--logo-magenta) 75%,
+                var(--logo-cyan) 100%
+            );
+            background-size: 300% 300%;
+            border-radius: 50px;
+            z-index: -1;
+            animation: gradient-shift 8s ease infinite;
+        }
+
+        .btn-secondary-enterprise:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: var(--space-xl);
+            margin-top: var(--space-3xl);
+            padding-top: 0;
+        }
+
+        .stat-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: white;
+            padding: var(--space-2xl);
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s ease;
+        }
+
+        .stat-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-icon {
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-lg);
+            color: var(--accent-blue);
+        }
+
+        .stat-number {
+            font-size: var(--text-4xl);
+            font-weight: 700;
+            color: var(--primary-black);
+            line-height: 1;
+            margin-bottom: var(--space-xs);
+        }
+
+        .stat-label {
+            font-size: var(--text-base);
+            color: var(--grey-600);
+            font-weight: 400;
+        }
+
+        .hero-image-enterprise {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-card {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, #5470B5 0%, #7090D5 100%);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .hero-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-badge-float {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: white;
+            padding: var(--space-xl);
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .badge-icon {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-sm);
+            color: var(--accent-blue);
+        }
+
+        .badge-number {
+            font-size: var(--text-5xl);
+            font-weight: 700;
+            color: var(--primary-black);
+            line-height: 1;
+        }
+
+        .badge-label {
+            font-size: var(--text-sm);
+            color: var(--grey-600);
+            margin-top: var(--space-xs);
+            font-weight: 600;
+        }
+
+        /* ===== INTRO SECTION (New) ===== */
+        .intro-section {
+            padding: var(--space-5xl) 0;
+            background: white;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+
+        .intro-image {
+            position: relative;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .intro-content {
+            max-width: 100%;
+        }
+
+        .intro-content h2 {
+            font-size: var(--text-4xl);
+            margin-bottom: var(--space-xl);
+        }
+
+        .intro-content p {
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            color: var(--grey-700);
+            margin-bottom: var(--space-lg);
+        }
+
+        .intro-content strong {
+            color: var(--primary-black);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--grey-50) 0%, var(--grey-100) 100%);
+            padding: var(--space-2xl);
+            border-radius: 12px;
+            border-left: 4px solid;
+            border-image: var(--logo-gradient) 1;
+            margin: var(--space-2xl) 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* ===== SUCCESS STATS SECTION ===== */
+        .success-stats-section {
+            background: var(--primary-black);
+            color: white;
+            padding: var(--space-4xl) 0;
+        }
+
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-3xl);
+            text-align: center;
+        }
+
+        .success-item {
+            padding: var(--space-2xl);
+        }
+
+        .success-icon {
+            font-size: 48px;
+            margin-bottom: var(--space-lg);
+            opacity: 0.9;
+        }
+
+        .success-number {
+            font-size: var(--text-5xl);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            background: var(--logo-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .success-label {
+            font-size: var(--text-base);
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+        }
+
+        /* ===== SECTION LAYOUT ===== */
+        .section-enterprise {
+            padding: var(--space-5xl) 0;
+        }
+
+        .section-header-enterprise {
+            max-width: 800px;
+            margin-bottom: var(--space-4xl);
+        }
+
+        .section-eyebrow {
+            font-size: var(--text-sm);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            background: var(--logo-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-lg);
+            display: inline-block;
+        }
+
+        .section-title-enterprise {
+            font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl));
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-lg);
+            color: var(--primary-black);
+        }
+
+        .section-description {
+            font-size: var(--text-xl);
+            line-height: 1.7;
+            color: var(--grey-600);
+        }
+
+        /* ===== TRAINING CARDS (Enhanced) ===== */
+        .training-intro {
+            background: linear-gradient(135deg, var(--grey-100) 0%, var(--grey-200) 100%);
+            border-radius: 16px;
+            padding: var(--space-4xl);
+            border: 2px solid var(--grey-300);
+            margin: var(--space-4xl) 0;
+            text-align: center;
+        }
+
+        .training-intro-icon {
+            font-size: 80px;
+            margin-bottom: var(--space-lg);
+        }
+
+        .training-intro p {
+            font-size: var(--text-xl);
+            color: var(--grey-700);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .services-grid-enterprise {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-2xl);
+            margin-top: var(--space-3xl);
+        }
+
+        .service-card-enterprise {
+            background: white;
+            border: 2px solid var(--grey-200);
+            border-radius: 12px;
+            padding: var(--space-3xl);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card-enterprise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: var(--logo-gradient);
+            transition: width 0.4s ease;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .service-card-enterprise:hover {
+            border-color: var(--grey-400);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-card-enterprise:hover::before {
+            width: 100%;
+        }
+
+        .service-header {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        .service-icon {
+            font-size: 64px;
+            line-height: 1;
+        }
+
+        .service-number {
+            font-size: var(--text-6xl);
+            font-weight: 700;
+            color: var(--grey-200);
+            line-height: 1;
+        }
+
+        .service-card-enterprise h3 {
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-lg);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .service-card-enterprise > p {
+            color: var(--grey-600);
+            line-height: 1.7;
+            margin-bottom: var(--space-xl);
+            font-size: var(--text-lg);
+            flex-grow: 1;
+        }
+
+        .service-features-list {
+            list-style: none;
+            margin: var(--space-xl) 0;
+            padding: var(--space-xl) 0;
+            border-top: 1px solid var(--grey-200);
+        }
+
+        .service-features-list li {
+            padding: var(--space-sm) 0;
+            color: var(--grey-700);
+            font-size: var(--text-base);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+            line-height: 1.6;
+        }
+
+        .service-features-list li::before {
+            content: '✓';
+            color: var(--logo-cyan);
+            font-weight: 700;
+            font-size: var(--text-lg);
+        }
+
+        .service-details {
+            background: var(--grey-50);
+            padding: var(--space-lg);
+            border-radius: 8px;
+            margin: var(--space-lg) 0;
+        }
+
+        .service-detail-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+            font-size: var(--text-sm);
+            color: var(--grey-700);
+        }
+
+        .service-detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-detail-icon {
+            font-size: var(--text-lg);
+        }
+
+        .service-price-enterprise {
+            font-size: var(--text-4xl);
+            font-weight: 700;
+            color: var(--primary-black);
+            margin: var(--space-xl) 0 var(--space-sm);
+        }
+
+        .service-price-note {
+            font-size: var(--text-sm);
+            color: var(--grey-500);
+            margin-bottom: var(--space-lg);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-enterprise {
+            background: var(--grey-50);
+        }
+
+        .about-grid-enterprise {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+
+        .about-content-enterprise {
+            max-width: 560px;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-2xl);
+        }
+
+        .credential-card {
+            background: white;
+            border: 1px solid var(--grey-200);
+            padding: var(--space-lg);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--primary-grey);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .credential-card:hover {
+            border-color: var(--primary-black);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-enterprise {
+            background: var(--primary-black);
+            color: white;
+            padding: var(--space-5xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-enterprise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 230, 0, 0.05) 100%);
+        }
+
+        .cta-content-enterprise {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content-enterprise h2 {
+            font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl));
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+
+        .cta-content-enterprise p {
+            font-size: var(--text-xl);
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .btn-white-enterprise {
+            background: white;
+            color: var(--primary-black);
+        }
+
+        .btn-outline-enterprise {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline-enterprise:hover {
+            background: white;
+            color: var(--primary-black);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer-enterprise {
+            background: var(--grey-900);
+            color: white;
+            padding: var(--space-4xl) 0 var(--space-2xl);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--space-4xl);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .footer-brand h3 {
+            font-size: var(--text-2xl);
+            color: white;
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-brand p {
+            color: var(--grey-400);
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: var(--text-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--grey-400);
+            text-decoration: none;
+            font-size: var(--text-sm);
+            line-height: 2;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: var(--space-2xl);
+            border-top: 1px solid var(--grey-800);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: var(--text-sm);
+            color: var(--grey-500);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .enterprise-hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding: var(--space-4xl) 0;
+            }
+
+            .hero-image-enterprise {
+                display: none;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+
+            .intro-image {
+                height: 400px;
+            }
+
+            .services-grid-enterprise {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid-enterprise {
+                grid-template-columns: 1fr;
+            }
+
+            .success-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+
+            .cta-actions {
+                flex-direction: column;
+            }
+
+            .btn-enterprise {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .services-grid-enterprise {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="enterprise-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="C:/Users/dd/OneDrive/Desktop/1 Projekte/AIconsult.ch/AIConsult.ch/Logos/AIConsult_ch_blk-removebg.png" alt="AIConsult.ch Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#warum-ki">Warum KI?</a></li>
+                <li><a href="#schulungen">Schulungen</a></li>
+                <li><a href="#ueber-mich">Über mich</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="tel:+41797401021" class="nav-cta-btn">+41 79 740 10 21</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="enterprise-hero">
+        <div class="container">
+            <div class="hero-content-enterprise">
+                <div class="hero-eyebrow">
+                    SWISS AI CONSULTING
+                </div>
+                <h1 class="hero-title-enterprise">
+                    KI-Beratung für<br>
+                    <span class="highlight">messbare Resultate</span>
+                </h1>
+                <p class="hero-subtitle-enterprise">
+                    Wir entwickeln Ihre Mitarbeitenden von KI-Neulingen zu KI-Experten. Mit praxisorientierten
+                    Schulungen und bewährten Methoden aus 20 Jahren Erfahrung in Vertrieb, Marketing und Operations
+                    sorgen wir für eine nachhaltige KI-Integration in Ihrem Unternehmen – ohne technisches
+                    Fachchinesisch und mit Fokus auf messbare Ergebnisse.
+                </p>
+                <div class="hero-cta-enterprise">
+                    <a href="#kontakt" class="btn-enterprise btn-primary-enterprise">
+                        Kostenloses Erstgespräch
+                    </a>
+                    <a href="#schulungen" class="btn-enterprise btn-secondary-enterprise">
+                        Schulungen ansehen →
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Geschulte Personen</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🎓</div>
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">KI-Workshops</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">😊</div>
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Zufriedenheit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-enterprise">
+            <div class="hero-image-card">
+                <img src="public/images/adrian-foto.jpg" alt="Adrian Althaus - KI-Berater">
+            </div>
+            <div class="hero-badge-float">
+                <div class="badge-icon">🏆</div>
+                <div class="badge-number">20+</div>
+                <div class="badge-label">Jahre Expertise</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS STATS SECTION -->
+    <section class="success-stats-section">
+        <div class="container">
+            <div class="success-grid">
+                <div class="success-item">
+                    <div class="success-icon">👥</div>
+                    <div class="success-number">100+</div>
+                    <div class="success-label">Geschulte Personen</div>
+                </div>
+                <div class="success-item">
+                    <div class="success-icon">🎓</div>
+                    <div class="success-number">50+</div>
+                    <div class="success-label">KI-Workshops</div>
+                </div>
+                <div class="success-item">
+                    <div class="success-icon">😊</div>
+                    <div class="success-number">98%</div>
+                    <div class="success-label">Zufriedenheit</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO/WHY AI SECTION -->
+    <section class="intro-section" id="warum-ki">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=1000&fit=crop" alt="Künstliche Intelligenz - AI Technology">
+                </div>
+                <div class="intro-content">
+                    <h2>Künstliche Intelligenz im Aufschwung</h2>
+                    <p>
+                        Spätestens seit der Einführung von ChatGPT Ende 2022 erleben wir einen der größten
+                        Technologiesprünge des Jahrzehnts. Generative KI-Tools wie ChatGPT oder Claude werden in
+                        Unternehmen weltweit vermehrt eingesetzt – in der Schweiz nutzt bereits über ein Drittel
+                        der KMU solche Tools, etwa um Marketingtexte oder Werbeanzeigen zu erstellen. Die Vorteile
+                        liegen auf der Hand: <strong>57% der Schweizer KMU, die KI einsetzen, berichten von deutlichen
+                        Zeitgewinnen und effizienteren Prozessen</strong>.
+                    </p>
+
+                    <div class="highlight-box">
+                        <p>
+                            <strong>Die Herausforderung:</strong> Dennoch zögern viele Firmen. Sie wollen KI nutzen,
+                            wissen aber nicht, wie sie anfangen sollen oder wo das größte Potenzial liegt. SWISS AI
+                            Consulting schließt diese Lücke. Als auf KMU fokussierter Anbieter verstehen wir die
+                            besonderen Anforderungen kleiner und mittlerer Unternehmen – sowohl im B2B- als auch
+                            B2C-Umfeld.
+                        </p>
+                    </div>
+
+                    <p>
+                        <strong>Ihr Vorteil als KMU:</strong> Ob Dienstleistungssektor, Konsumgüter (FMCG) oder
+                        Investitionsgüter – wir verstehen Ihre Branche. Gemeinsam identifizieren wir praxisnahe
+                        KI-Anwendungen für Marketing, Vertrieb und Operations, damit Sie Zeit sparen, Kosten senken
+                        und Innovation gezielt vorantreiben.
+                    </p>
+
+                    <p>
+                        <strong>Vertrauen Sie einem lokalen KI-Berater:</strong> Gründer Adrian Althaus verfügt über
+                        20+ Jahre Business-Expertise in der Schweiz. Er kennt die hiesigen Marktbedingungen und spricht
+                        Ihre Sprache. Buchen Sie jetzt Ihr kostenloses Erstgespräch, um ungenutzte Potenziale für
+                        Ihr Unternehmen aufzudecken und Ihre KI-Strategie auf Kurs zu bringen!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAINING SECTION -->
+    <section class="section-enterprise" id="schulungen" style="background: var(--grey-50);">
+        <div class="container">
+            <div class="section-header-enterprise">
+                <div class="section-eyebrow">KI-SCHULUNGEN</div>
+                <h2 class="section-title-enterprise">Praxisnahe Weiterbildung für Ihr Team</h2>
+                <p class="section-description">
+                    Einfache, verständliche KI-Trainings ohne technisches Kauderwelsch – Ihr Team lernt,
+                    KI-Tools direkt im Tagesgeschäft einzusetzen. In unseren Workshops und Trainings arbeiten
+                    die Teilnehmenden mit echten Anwendungsfällen aus Ihrem Unternehmen, sodass neu erlerntes
+                    Wissen sofort zu greifbaren Resultaten führt.
+                </p>
+            </div>
+
+            <div class="training-intro">
+                <div class="training-intro-icon">💡</div>
+                <p>
+                    <strong>Praxisorientierte KI-Schulungen ermöglichen es Ihrem Team, KI-Tools direkt im
+                    Arbeitsalltag anzuwenden.</strong>
+                </p>
+            </div>
+
+            <div class="services-grid-enterprise">
+                <!-- Workshop 1: KI-Einsteiger -->
+                <div class="service-card-enterprise">
+                    <div class="service-header">
+                        <div class="service-icon">🚀</div>
+                        <div class="service-number">01</div>
+                    </div>
+
+                    <h3>KI-Einsteiger Workshop</h3>
+                    <p>
+                        Perfekt für Teams, die noch keine KI-Erfahrung haben. In nur 3 Stunden vermitteln wir
+                        die wichtigsten Tools und erste Anwendungen – ideal, um Berührungsängste abzubauen
+                        und direkt hands-on loszulegen.
+                    </p>
+
+                    <ul class="service-features-list">
+                        <li><strong>Generative KI kennenlernen:</strong> Überblick über aktuelle KI-Tools (z. B. ChatGPT, Bard oder Claude) und deren Nutzen im Arbeitsalltag</li>
+                        <li><strong>Effektive Prompts schreiben:</strong> Lernen Sie, kluge Eingaben zu formulieren, um optimale Ergebnisse zu erhalten</li>
+                        <li><strong>Produktiver arbeiten:</strong> Automatisieren Sie Routineaufgaben – von E-Mails über Textentwürfe bis zu Präsentationen</li>
+                        <li><strong>Praxisübungen:</strong> Ihre Mitarbeitenden bearbeiten im Workshop eigene Beispiele aus dem Tagesgeschäft</li>
+                    </ul>
+
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">⏰</span>
+                            <span>3 Stunden Online-Workshop (interaktiv)</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">📋</span>
+                            <span>Inkl. Checklisten & Vorlagen zum Mitnehmen</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">👥</span>
+                            <span>Minimum 3 Teilnehmende</span>
+                        </div>
+                    </div>
+
+                    <div class="service-price-enterprise">CHF 290.–</div>
+                    <div class="service-price-note">pro Person (ab 3 Teilnehmenden)</div>
+
+                    <a href="#kontakt" class="btn-enterprise btn-primary-enterprise" style="width: 100%; justify-content: center;">
+                        Workshop jetzt buchen
+                    </a>
+                </div>
+
+                <!-- Workshop 2: KI-Training für Ihr Team -->
+                <div class="service-card-enterprise">
+                    <div class="service-header">
+                        <div class="service-icon">💼</div>
+                        <div class="service-number">02</div>
+                    </div>
+
+                    <h3>KI-Training für Ihr Team</h3>
+                    <p>
+                        Ganztägiges Intensiv-Training mit Fokus auf Ihre spezifischen Arbeitsprozesse. Wir kommen
+                        zu Ihnen (vor Ort in der Schweiz oder online) und schulen Ihr Team maßgeschneidert – von
+                        Marketing über Sales bis hin zu operativen Abläufen.
+                    </p>
+
+                    <ul class="service-features-list">
+                        <li><strong>Prozess-Analyse vorab:</strong> Gemeinsam durchleuchten wir Ihre aktuellen Workflows und identifizieren KI-Potenziale</li>
+                        <li><strong>Branchenrelevante KI-Tools:</strong> Sie lernen Tools und Lösungen kennen, die genau auf Ihr Fachgebiet zugeschnitten sind (inkl. Tipps zu Datenschutz & Compliance)</li>
+                        <li><strong>Workflow-Optimierung:</strong> Wir zeigen, wie KI Routineaufgaben automatisiert, Zeit einspart und Ihrem Team den Rücken freihält</li>
+                        <li><strong>Gemeinsame Umsetzung:</strong> Im Training setzen wir echte Use Cases aus Ihrem Unternehmensalltag direkt um</li>
+                    </ul>
+
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">📅</span>
+                            <span>1 Tag Intensiv-Workshop (7–8 Stunden)</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">🏢</span>
+                            <span>Vor Ort (Schweiz) oder online nach Wahl</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">💬</span>
+                            <span>Inkl. 14 Tage E-Mail-Support im Anschluss</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">👥</span>
+                            <span>Für bis zu 8 Personen</span>
+                        </div>
+                    </div>
+
+                    <div class="service-price-enterprise">CHF 1'200.–</div>
+                    <div class="service-price-note">Pauschale (für das Team bis 8 Personen)</div>
+
+                    <a href="#kontakt" class="btn-enterprise btn-primary-enterprise" style="width: 100%; justify-content: center;">
+                        Training jetzt anfragen
+                    </a>
+                </div>
+
+                <!-- Workshop 3: Individuelle KI-Beratung -->
+                <div class="service-card-enterprise">
+                    <div class="service-header">
+                        <div class="service-icon">🎯</div>
+                        <div class="service-number">03</div>
+                    </div>
+
+                    <h3>Individuelle KI-Beratung</h3>
+                    <p>
+                        Exklusive Einzelberatung für Führungskräfte und Spezialisten, die KI strategisch im
+                        Unternehmen verankern wollen. Persönliche Betreuung, vertraulich und auf Ihre Ziele
+                        ausgerichtet.
+                    </p>
+
+                    <ul class="service-features-list">
+                        <li><strong>KI-Strategie entwickeln:</strong> Wir erarbeiten eine individuelle KI-Roadmap für Ihr Unternehmen mit klaren ROI-Potenzialen</li>
+                        <li><strong>ROI-Analyse & Potenzialbewertung:</strong> Fundierte Einschätzung, wo Sie Kosten sparen, Umsatz steigern oder Kundenzufriedenheit erhöhen können</li>
+                        <li><strong>Tool-Empfehlungen:</strong> Orientierung im Tool-Dschungel – wir empfehlen die passendsten KI-Tools für Ihre Branche</li>
+                        <li><strong>Change Management:</strong> Begleitung beim Wandel – wir unterstützen Sie dabei, Ihr Team für KI zu begeistern und mitzunehmen</li>
+                    </ul>
+
+                    <div class="service-details">
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">🕐</span>
+                            <span>Flexible Terminvereinbarung (nach Ihrem Zeitplan)</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">💻</span>
+                            <span>Vor Ort oder via Video-Call</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">🎁</span>
+                            <span>Erstgespräch 30 Min. kostenlos</span>
+                        </div>
+                        <div class="service-detail-item">
+                            <span class="service-detail-icon">🤝</span>
+                            <span>Langfristige Begleitung als externer KI-Coach möglich</span>
+                        </div>
+                    </div>
+
+                    <div class="service-price-enterprise">CHF 180.–</div>
+                    <div class="service-price-note">pro Stunde (Erstgespräch gratis)</div>
+
+                    <a href="#kontakt" class="btn-enterprise btn-primary-enterprise" style="width: 100%; justify-content: center;">
+                        Termin jetzt vereinbaren
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-enterprise about-enterprise" id="ueber-mich">
+        <div class="container">
+            <div class="about-grid-enterprise">
+                <div class="about-content-enterprise">
+                    <div class="section-eyebrow">ÜBER MICH</div>
+                    <h2 class="section-title-enterprise">Ihr persönlicher KI-Partner</h2>
+                    <h3 style="font-size: var(--text-2xl); color: var(--accent-blue); margin: var(--space-lg) 0;">Adrian Althaus</h3>
+                    <p class="section-description" style="margin-bottom: var(--space-md);">
+                        Als KI-Trainer und Berater helfe ich Schweizer KMU, künstliche Intelligenz praktisch
+                        und gewinnbringend in ihrem Arbeitsalltag einzusetzen. Ohne technisches Fachchinesisch,
+                        dafür mit viel Praxisbezug und sofort umsetzbaren Lösungen.
+                    </p>
+                    <p class="section-description">
+                        <strong>Mein Hintergrund:</strong> Ich habe 20+ Jahre Erfahrung in Sales, Marketing und Operations
+                        bei internationalen Unternehmen. Diese Business-Expertise kombiniere ich mit fundiertem
+                        KI-Wissen, um Ihnen zu zeigen, wie Sie KI gezielt für mehr Effizienz, bessere Ergebnisse
+                        und Zeitersparnis nutzen können.
+                    </p>
+                    <div class="credentials-grid">
+                        <div class="credential-card">🎓 100+ Personen in Unternehmen geschult</div>
+                        <div class="credential-card">🚀 50+ KI-Workshops durchgeführt</div>
+                        <div class="credential-card">📃 Marketing & Sales Diploma (Diplom in Marketing & Verkauf)</div>
+                        <div class="credential-card">🏆 20+ Jahre Business-Erfahrung</div>
+                    </div>
+                </div>
+                <div class="hero-image-enterprise" style="height: auto;">
+                    <div class="hero-image-card">
+                        <img src="public/images/adrian-foto.jpg" alt="Adrian Althaus">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-enterprise" id="kontakt">
+        <div class="container">
+            <div class="cta-content-enterprise">
+                <h2>Bereit für den nächsten Schritt?</h2>
+                <p>
+                    Buchen Sie jetzt Ihr kostenloses 30-minütiges Erstgespräch und erfahren Sie, wie KI Ihr
+                    Unternehmen mit messbaren Resultaten voranbringen kann. Gemeinsam heben wir Ihre Prozesse
+                    auf das nächste Level – damit auch Ihr Unternehmen vom KI-Aufschwung profitiert!
+                </p>
+                <div class="cta-actions">
+                    <a href="tel:+41797401021" class="btn-enterprise btn-white-enterprise">
+                        +41 79 740 10 21
+                    </a>
+                    <a href="mailto:aalthaus44@gmail.com" class="btn-enterprise btn-outline-enterprise">
+                        E-Mail senden
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-enterprise">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>AIConsult.ch</h3>
+                    <p>
+                        SWISS AI CONSULTING – KI-Beratung für messbare Resultate.<br>
+                        Strategische Expertise aus 20 Jahren Sales, Marketing und Operations.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="tel:+41797401021">+41 79 740 10 21</a></li>
+                        <li><a href="mailto:aalthaus44@gmail.com">aalthaus44@gmail.com</a></li>
+                        <li>Brandstrasse 25<br>8952 Schlieren</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#warum-ki">Warum KI?</a></li>
+                        <li><a href="#schulungen">Schulungen</a></li>
+                        <li><a href="#ueber-mich">Über mich</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2025 AIConsult.ch - Alle Rechte vorbehalten</div>
+                <div>Adrian Althaus</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll effect for navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

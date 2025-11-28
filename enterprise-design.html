@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIConsult.ch - KI-Beratung für Schweizer KMU | Adrian Althaus</title>
+    <meta name="description" content="Enterprise KI-Beratung für Schweizer KMU. 20+ Jahre Erfahrung im Premium Product Management. Strategische KI-Integration mit messbarem ROI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== ENTERPRISE DESIGN SYSTEM ===== */
+        :root {
+            /* Enterprise Color System - Inspired by EY/Accenture */
+            --primary-black: #000000;
+            --primary-navy: #0A1628;
+            --primary-grey: #2e2e38;
+            --accent-yellow: #FFE600;
+            --accent-blue: #046bd2;
+            --accent-cyan: #00B8D4;
+
+            /* Neutral Scale */
+            --grey-50: #f8fafc;
+            --grey-100: #f1f5f9;
+            --grey-200: #e2e8f0;
+            --grey-300: #cbd5e1;
+            --grey-400: #94a3b8;
+            --grey-500: #64748b;
+            --grey-600: #475569;
+            --grey-700: #334155;
+            --grey-800: #1e293b;
+            --grey-900: #0f172a;
+
+            /* Spacing System */
+            --space-2xs: 0.25rem;
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            --space-5xl: 8rem;
+
+            /* Typography Scale */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+            --text-6xl: 3.75rem;
+            --text-7xl: 4.5rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: var(--text-base);
+            line-height: 1.6;
+            color: var(--primary-grey);
+            background: white;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Enterprise Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IBM Plex Sans', 'Inter', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--primary-black);
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-2xl);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--space-lg);
+            }
+        }
+
+        /* ===== ENTERPRISE NAVIGATION ===== */
+        .enterprise-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--grey-200);
+            z-index: 9999;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .enterprise-nav.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 var(--space-2xl);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 50px;
+        }
+
+        .nav-logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: var(--space-2xl);
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--primary-grey);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--text-sm);
+            letter-spacing: 0.01em;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-black);
+        }
+
+        .nav-cta-btn {
+            padding: 0.625rem 1.5rem;
+            background: var(--primary-black);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: var(--text-sm);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-black);
+        }
+
+        .nav-cta-btn:hover {
+            background: white;
+            color: var(--primary-black);
+        }
+
+        /* ===== ENTERPRISE HERO ===== */
+        .enterprise-hero {
+            min-height: calc(100vh - 80px);
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: var(--space-4xl);
+            padding: var(--space-5xl) 0;
+            background: linear-gradient(135deg, #ffffff 0%, var(--grey-50) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enterprise-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(4, 107, 210, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content-enterprise {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-md);
+            background: var(--grey-100);
+            border-radius: 50px;
+            font-size: var(--text-xs);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-grey);
+            margin-bottom: var(--space-xl);
+        }
+
+        .hero-title-enterprise {
+            font-size: clamp(var(--text-4xl), 5vw, var(--text-7xl));
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: var(--space-xl);
+            color: var(--primary-black);
+            letter-spacing: -0.03em;
+        }
+
+        .hero-title-enterprise .highlight {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title-enterprise .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: 0;
+            right: 0;
+            height: 0.15em;
+            background: var(--accent-yellow);
+            z-index: -1;
+        }
+
+        .hero-subtitle-enterprise {
+            font-size: var(--text-xl);
+            line-height: 1.6;
+            color: var(--grey-600);
+            margin-bottom: var(--space-2xl);
+            max-width: 600px;
+            font-weight: 400;
+        }
+
+        .hero-cta-enterprise {
+            display: flex;
+            gap: var(--space-lg);
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-enterprise {
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: var(--text-base);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary-enterprise {
+            background: var(--primary-black);
+            color: white;
+            border-color: var(--primary-black);
+        }
+
+        .btn-primary-enterprise:hover {
+            background: var(--primary-grey);
+            border-color: var(--primary-grey);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary-enterprise {
+            background: white;
+            color: var(--primary-black);
+            border: 2px solid var(--grey-300);
+        }
+
+        .btn-secondary-enterprise:hover {
+            border-color: var(--primary-black);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: var(--space-2xl);
+            margin-top: var(--space-3xl);
+            padding-top: var(--space-2xl);
+            border-top: 1px solid var(--grey-200);
+        }
+
+        .stat-item {
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: var(--text-4xl);
+            font-weight: 700;
+            color: var(--primary-black);
+            line-height: 1;
+            margin-bottom: var(--space-xs);
+        }
+
+        .stat-label {
+            font-size: var(--text-sm);
+            color: var(--grey-600);
+            font-weight: 500;
+        }
+
+        .hero-image-enterprise {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-card {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 3/4;
+            background: var(--grey-900);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .hero-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-badge-float {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: white;
+            padding: var(--space-xl);
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .badge-number {
+            font-size: var(--text-5xl);
+            font-weight: 700;
+            color: var(--primary-black);
+            line-height: 1;
+        }
+
+        .badge-label {
+            font-size: var(--text-sm);
+            color: var(--grey-600);
+            margin-top: var(--space-xs);
+            font-weight: 600;
+        }
+
+        /* ===== ENTERPRISE TRUST BAR ===== */
+        .trust-section {
+            background: var(--primary-black);
+            padding: var(--space-2xl) 0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-3xl);
+        }
+
+        .trust-item {
+            text-align: center;
+            color: white;
+        }
+
+        .trust-icon {
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-md);
+            opacity: 0.9;
+        }
+
+        .trust-label {
+            font-size: var(--text-sm);
+            font-weight: 600;
+            opacity: 0.8;
+        }
+
+        /* ===== ENTERPRISE SECTION LAYOUT ===== */
+        .section-enterprise {
+            padding: var(--space-5xl) 0;
+        }
+
+        .section-header-enterprise {
+            max-width: 800px;
+            margin-bottom: var(--space-4xl);
+        }
+
+        .section-eyebrow {
+            font-size: var(--text-xs);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-blue);
+            margin-bottom: var(--space-md);
+        }
+
+        .section-title-enterprise {
+            font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-lg);
+            color: var(--primary-black);
+        }
+
+        .section-description {
+            font-size: var(--text-lg);
+            line-height: 1.7;
+            color: var(--grey-600);
+        }
+
+        /* ===== ENTERPRISE SERVICES GRID ===== */
+        .services-grid-enterprise {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+        }
+
+        .service-card-enterprise {
+            background: white;
+            border: 1px solid var(--grey-200);
+            border-radius: 0;
+            padding: var(--space-3xl);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .service-card-enterprise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background: var(--primary-black);
+            transition: width 0.4s ease;
+        }
+
+        .service-card-enterprise:hover {
+            border-color: var(--grey-400);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .service-card-enterprise:hover::before {
+            width: 100%;
+        }
+
+        .service-number {
+            font-size: var(--text-6xl);
+            font-weight: 700;
+            color: var(--grey-200);
+            line-height: 1;
+            margin-bottom: var(--space-lg);
+        }
+
+        .service-card-enterprise h3 {
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-md);
+            font-weight: 600;
+        }
+
+        .service-card-enterprise p {
+            color: var(--grey-600);
+            line-height: 1.7;
+            margin-bottom: var(--space-xl);
+        }
+
+        .service-features-list {
+            list-style: none;
+            margin: var(--space-xl) 0;
+            padding: var(--space-xl) 0;
+            border-top: 1px solid var(--grey-200);
+        }
+
+        .service-features-list li {
+            padding: var(--space-sm) 0;
+            color: var(--grey-700);
+            font-size: var(--text-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-sm);
+        }
+
+        .service-features-list li::before {
+            content: '→';
+            color: var(--primary-black);
+            font-weight: 700;
+        }
+
+        .service-price-enterprise {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--primary-black);
+            margin: var(--space-lg) 0;
+        }
+
+        .service-price-note {
+            font-size: var(--text-xs);
+            color: var(--grey-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== ENTERPRISE ABOUT SECTION ===== */
+        .about-enterprise {
+            background: var(--grey-50);
+        }
+
+        .about-grid-enterprise {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4xl);
+            align-items: center;
+        }
+
+        .about-content-enterprise {
+            max-width: 560px;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-2xl);
+        }
+
+        .credential-card {
+            background: white;
+            border: 1px solid var(--grey-200);
+            padding: var(--space-lg);
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--primary-grey);
+            transition: all 0.3s ease;
+        }
+
+        .credential-card:hover {
+            border-color: var(--primary-black);
+            transform: translateX(4px);
+        }
+
+        /* ===== ENTERPRISE CTA SECTION ===== */
+        .cta-enterprise {
+            background: var(--primary-black);
+            color: white;
+            padding: var(--space-5xl) 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-enterprise::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 230, 0, 0.05) 100%);
+        }
+
+        .cta-content-enterprise {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content-enterprise h2 {
+            font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+
+        .cta-content-enterprise p {
+            font-size: var(--text-xl);
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .cta-actions {
+            display: flex;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .btn-white-enterprise {
+            background: white;
+            color: var(--primary-black);
+            border: 2px solid white;
+        }
+
+        .btn-white-enterprise:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .btn-outline-enterprise {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline-enterprise:hover {
+            background: white;
+            color: var(--primary-black);
+        }
+
+        /* ===== ENTERPRISE FOOTER ===== */
+        .footer-enterprise {
+            background: var(--grey-900);
+            color: white;
+            padding: var(--space-4xl) 0 var(--space-2xl);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: var(--space-4xl);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .footer-brand h3 {
+            font-size: var(--text-2xl);
+            color: white;
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-brand p {
+            color: var(--grey-400);
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: var(--text-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: white;
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--grey-400);
+            text-decoration: none;
+            font-size: var(--text-sm);
+            line-height: 2;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: var(--space-2xl);
+            border-top: 1px solid var(--grey-800);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: var(--text-sm);
+            color: var(--grey-500);
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .enterprise-hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+                padding: var(--space-4xl) 0;
+            }
+
+            .hero-image-enterprise {
+                display: none;
+            }
+
+            .services-grid-enterprise {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid-enterprise {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-actions {
+                flex-direction: column;
+            }
+
+            .btn-enterprise {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ENTERPRISE NAVIGATION -->
+    <nav class="enterprise-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgNDAwIDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0ZXh0IHg9IjEwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkludGVyLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMDAwMDAwIj5BSUNvbnN1bHQ8dHNwYW4gZmlsbD0iIzA0NmJkMiI+LmNoPC90c3Bhbj48L3RleHQ+PC9zdmc+" alt="AIConsult.ch Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#ueber-mich">Über mich</a></li>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="tel:+41797401021" class="nav-cta-btn">079 740 10 21</a>
+        </div>
+    </nav>
+
+    <!-- ENTERPRISE HERO -->
+    <section class="enterprise-hero">
+        <div class="container">
+            <div class="hero-content-enterprise">
+                <div class="hero-eyebrow">
+                    🇨🇭 SWISS AI CONSULTING
+                </div>
+                <h1 class="hero-title-enterprise">
+                    KI-Beratung für<br>
+                    <span class="highlight">messbare Resultate</span>
+                </h1>
+                <p class="hero-subtitle-enterprise">
+                    Transformieren Sie künstliche Intelligenz in echten Wettbewerbsvorteil.
+                    Mit strategischer Expertise aus 20 Jahren Premium Product Management
+                    bei Samsung Electronics.
+                </p>
+                <div class="hero-cta-enterprise">
+                    <a href="#kontakt" class="btn-enterprise btn-primary-enterprise">
+                        Kostenloses Erstgespräch
+                    </a>
+                    <a href="#leistungen" class="btn-enterprise btn-secondary-enterprise">
+                        Leistungen ansehen →
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Jahre Erfahrung</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">$190M</div>
+                        <div class="stat-label">Business-Volumen</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">#1</div>
+                        <div class="stat-label">Position Europa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-enterprise">
+            <div class="hero-image-card">
+                <!-- HIER DEIN FOTO EINFÜGEN: Ersetze den Pfad unten mit deinem Foto -->
+                <img src="public/images/adrian-althaus.jpg" alt="Adrian Althaus - KI-Berater"
+                     style="background: linear-gradient(135deg, #5470B5 0%, #7090D5 100%);">
+            </div>
+            <div class="hero-badge-float">
+                <div class="badge-number">20+</div>
+                <div class="badge-label">Jahre Expertise</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-icon">🇨🇭</div>
+                    <div class="trust-label">Swiss Quality</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">🔒</div>
+                    <div class="trust-label">DSGVO-konform</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">⚡</div>
+                    <div class="trust-label">Schnelle Umsetzung</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">💼</div>
+                    <div class="trust-label">Enterprise Expertise</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section-enterprise" id="leistungen">
+        <div class="container">
+            <div class="section-header-enterprise">
+                <div class="section-eyebrow">LEISTUNGEN</div>
+                <h2 class="section-title-enterprise">Massgeschneiderte KI-Lösungen für Ihren Erfolg</h2>
+                <p class="section-description">
+                    Von der strategischen Analyse bis zur vollständigen Implementierung.
+                    Transparente Pakete mit garantiertem Return on Investment.
+                </p>
+            </div>
+            <div class="services-grid-enterprise">
+                <div class="service-card-enterprise">
+                    <div class="service-number">01</div>
+                    <h3>KI-Potenzialanalyse</h3>
+                    <p>
+                        Identifizieren Sie die grössten Optimierungspotenziale in Ihrem Unternehmen
+                        mit einer professionellen, strategischen KI-Analyse.
+                    </p>
+                    <ul class="service-features-list">
+                        <li>90-minütiges Strategiegespräch</li>
+                        <li>Detaillierte Prozess-Dokumentation</li>
+                        <li>ROI-Kalkulation & Business Case</li>
+                        <li>Konkrete Handlungsempfehlungen</li>
+                    </ul>
+                    <div class="service-price-enterprise">
+                        CHF 490.–
+                        <div class="service-price-note">Einmalig</div>
+                    </div>
+                    <a href="#kontakt" class="btn-enterprise btn-primary-enterprise" style="width: 100%; justify-content: center;">
+                        Jetzt buchen
+                    </a>
+                </div>
+
+                <div class="service-card-enterprise">
+                    <div class="service-number">02</div>
+                    <h3>KI-Integration</h3>
+                    <p>
+                        Implementierung der passenden KI-Tools direkt in Ihre bestehenden
+                        Systeme – inklusive professioneller Team-Schulung.
+                    </p>
+                    <ul class="service-features-list">
+                        <li>Strategische Tool-Auswahl</li>
+                        <li>Vollständige System-Integration</li>
+                        <li>2h Mitarbeiter-Schulung</li>
+                        <li>30 Tage Premium-Support</li>
+                    </ul>
+                    <div class="service-price-enterprise">
+                        CHF 1'490.–
+                        <div class="service-price-note">Pro Projekt</div>
+                    </div>
+                    <a href="#kontakt" class="btn-enterprise btn-primary-enterprise" style="width: 100%; justify-content: center;">
+                        Anfragen
+                    </a>
+                </div>
+
+                <div class="service-card-enterprise">
+                    <div class="service-number">03</div>
+                    <h3>Individuelle Automatisierung</h3>
+                    <p>
+                        Massgeschneiderte Enterprise-KI-Lösungen für spezifische Herausforderungen –
+                        vom Chatbot bis zum kompletten Workflow.
+                    </p>
+                    <ul class="service-features-list">
+                        <li>Custom-Entwicklung</li>
+                        <li>Enterprise-Integration</li>
+                        <li>Umfassende Schulung</li>
+                        <li>90 Tage Premium-Support</li>
+                    </ul>
+                    <div class="service-price-enterprise">
+                        Auf Anfrage
+                        <div class="service-price-note">Individuelle Kalkulation</div>
+                    </div>
+                    <a href="#kontakt" class="btn-enterprise btn-primary-enterprise" style="width: 100%; justify-content: center;">
+                        Beratung anfragen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-enterprise about-enterprise" id="ueber-mich">
+        <div class="container">
+            <div class="about-grid-enterprise">
+                <div class="about-content-enterprise">
+                    <div class="section-eyebrow">ÜBER MICH</div>
+                    <h2 class="section-title-enterprise">Ihr persönlicher KI-Partner</h2>
+                    <h3 style="font-size: var(--text-2xl); color: var(--accent-blue); margin: var(--space-lg) 0;">Adrian Althaus</h3>
+                    <p class="section-description" style="margin-bottom: var(--space-md);">
+                        Mit über 20 Jahren Erfahrung im Product Management und Sales bei Samsung Electronics
+                        habe ich gelernt, wie man komplexe Technologien erfolgreich in den Markt bringt
+                        und profitable Geschäftsmodelle aufbaut.
+                    </p>
+                    <p class="section-description">
+                        <strong>Als Head of Product Management bei Samsung</strong> verantwortete ich ein
+                        Business-Volumen von 190 Millionen Dollar und führte die Premium-Transformation zur
+                        Nr. 1 Position in Europa. Diese Enterprise-Expertise nutze ich jetzt, um Schweizer KMU
+                        dabei zu helfen, künstliche Intelligenz strategisch und gewinnbringend einzusetzen.
+                    </p>
+                    <div class="credentials-grid">
+                        <div class="credential-card">Marketing & Sales Diploma AKAD</div>
+                        <div class="credential-card">Cambridge Certificate</div>
+                        <div class="credential-card">Unternehmer AlcFree.ch</div>
+                        <div class="credential-card">20+ Jahre Samsung</div>
+                    </div>
+                </div>
+                <div class="hero-image-enterprise" style="height: auto;">
+                    <div class="hero-image-card">
+                        <!-- HIER DEIN FOTO EINFÜGEN -->
+                        <img src="public/images/adrian-althaus.jpg" alt="Adrian Althaus"
+                             style="background: linear-gradient(135deg, #5470B5 0%, #7090D5 100%);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-enterprise" id="kontakt">
+        <div class="container">
+            <div class="cta-content-enterprise">
+                <h2>Bereit für den nächsten Schritt?</h2>
+                <p>
+                    Buchen Sie jetzt Ihr kostenloses 30-minütiges Erstgespräch und erfahren Sie,
+                    wie KI Ihr Unternehmen mit messbaren Resultaten voranbringen kann.
+                </p>
+                <div class="cta-actions">
+                    <a href="tel:+41797401021" class="btn-enterprise btn-white-enterprise">
+                        079 740 10 21
+                    </a>
+                    <a href="mailto:aalthaus44@gmail.com" class="btn-enterprise btn-outline-enterprise">
+                        E-Mail senden
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-enterprise">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>AIConsult.ch</h3>
+                    <p>
+                        Enterprise KI-Beratung für Schweizer KMU.<br>
+                        Strategische Expertise aus 20 Jahren Premium Product Management.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="tel:+41797401021">079 740 10 21</a></li>
+                        <li><a href="mailto:aalthaus44@gmail.com">aalthaus44@gmail.com</a></li>
+                        <li>Brandstrasse 25<br>8952 Schlieren</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#leistungen">Leistungen</a></li>
+                        <li><a href="#ueber-mich">Über mich</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2025 AIConsult.ch - Alle Rechte vorbehalten</div>
+                <div>Adrian Althaus</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll effect for navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>

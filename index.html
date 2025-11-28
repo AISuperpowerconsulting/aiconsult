@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIConsult.ch | KI Beratung, Workshops & Automatisierung für KMU in der Schweiz</title>
+    <meta name="description"
+        content="AIConsult.ch unterstützt Schweizer KMU und Führungskräfte bei KI Strategie, praxisnahen Workshops und Automatisierung. Entwickeln Sie Ihr Team vom KI Neuling zum AI Profi.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo-aiconsult-white.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style-improved.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="img/logo-aiconsult-white.png" alt="AIConsult.ch Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#why-ai" data-i18n="nav.why">Warum KI</a></li>
+                <li><a href="#services" data-i18n="nav.solutions">Lösungen</a></li>
+                <li><a href="#offers" data-i18n="nav.offers">Angebote</a></li>
+                <li><a href="#testimonials" data-i18n="nav.success">Erfolge</a></li>
+                <li><a href="#about" data-i18n="nav.about">Über uns</a></li>
+                <li><a href="#contact" class="btn btn-sm" data-i18n="nav.contact">Kontakt</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="hero-bg">
+            <img src="img/ai-mountain-waves-wide.png"
+                alt="Digitale Datenwellen vor Schweizer Bergpanorama als Symbol für KI Beratung">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="overline" data-i18n="hero.overline">SWISS AI CONSULTING</span>
+                <h1 data-i18n="hero.title">Ihr Team wird KI lieben – nicht fürchten</h1>
+                <p class="subline" data-i18n="hero.subtitle">Praxisnahe KI Workshops und Automatisierungen für Schweizer KMU.
+                    Ohne Fachchinesisch. Mit messbaren Resultaten. Von jemandem, der Ihren Alltag kennt.</p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_primary">Jetzt 30min Gratis-Analyse buchen</a>
+                    <a href="#testimonials" class="btn btn-secondary" data-i18n="hero.cta_secondary">Erfolgsgeschichten ansehen</a>
+                </div>
+                <div class="trust-line">
+                    <p><span class="counter" data-target="20">0</span>+ Jahre Erfahrung ·
+                       <span class="counter" data-target="100">0</span>+ geschulte Personen ·
+                       <span class="counter" data-target="15">0</span>+ Schweizer KMU vertrauen uns</p>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/adrian-portrait.png" alt="Adrian Althaus, KI Berater">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Why AI Section -->
+        <section id="why-ai">
+            <div class="container">
+                <h2>Warum KI für Schweizer KMU jetzt wichtig ist</h2>
+                <p class="intro-text">Generative KI wie ChatGPT oder Claude verändert Marketing, Vertrieb und Operations
+                    in hohem Tempo. In der Schweiz setzen immer mehr KMU KI für Texte, Analysen und Automatisierung ein.
+                    Wer früh lernt, diese Werkzeuge gezielt einzusetzen, spart Zeit, reduziert Fehler und verbessert die
+                    Qualität der Arbeit.</p>
+
+                <div class="grid-3">
+                    <div class="card benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Mehr Zeit für Kunden</h3>
+                        <p>Wiederkehrende Aufgaben laufen im Hintergrund. Ihr Team konzentriert sich auf Beratung,
+                            Verkauf und Projekte mit Mehrwert.</p>
+                        <div class="benefit-stat">Bis zu <strong>40% Zeitersparnis</strong></div>
+                    </div>
+                    <div class="card benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"/>
+                                <path d="M7 16l4-8 4 4 4-12"/>
+                            </svg>
+                        </div>
+                        <h3>Bessere Entscheide</h3>
+                        <p>KI unterstützt bei Analysen, Forecasts und Priorisierungen. Entscheidungen basieren stärker
+                            auf Daten als auf Bauchgefühl.</p>
+                        <div class="benefit-stat">Fundierte <strong>Datenbasis</strong></div>
+                    </div>
+                    <div class="card benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Attraktive Arbeitgeberin</h3>
+                        <p>Moderne Tools, klare Prozesse und digitale Skills machen Ihr Unternehmen interessanter für
+                            bestehende Mitarbeitende und neue Talente.</p>
+                        <div class="benefit-stat">Top <strong>Employer Brand</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section - NEU -->
+        <section id="testimonials">
+            <div class="container">
+                <h2>Was Kunden über die Zusammenarbeit sagen</h2>
+                <p class="intro-text">Echte Ergebnisse von Schweizer KMU, die KI erfolgreich im Alltag einsetzen</p>
+
+                <div class="testimonial-grid">
+                    <div class="card testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/testimonial-1.jpg" alt="Fröhliches Marketing Team im Workshop" loading="lazy">
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Nach Adrians Workshop hat unser Marketing-Team direkt losgelegt.
+                            Wir sparen jetzt <strong>8 Stunden pro Woche</strong> bei der Content-Erstellung und die Qualität
+                            ist sogar gestiegen. Endlich verstehen wir, wie KI uns wirklich hilft."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <strong>Sarah M.</strong>
+                                <span>Marketing Leiterin, Werbeagentur Zürich</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/testimonial-2.jpg" alt="Erfolgreicher Geschäftsführer mit Team" loading="lazy">
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Ich war skeptisch, ob KI für unser traditionelles Geschäft passt.
+                            Adrian hat uns gezeigt, wie wir Angebote und Follow-ups automatisieren.
+                            <strong>Kein Lead geht mehr vergessen</strong> und wir haben 30% mehr Abschlüsse."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <strong>Thomas B.</strong>
+                                <span>Geschäftsführer, KMU Bern</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card testimonial-card">
+                        <div class="testimonial-image">
+                            <img src="img/testimonial-3.jpg" alt="Motiviertes Startup Team arbeitet zusammen" loading="lazy">
+                        </div>
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">"Der Workshop war praxisnah und sofort umsetzbar.
+                            Keine theoretischen Vorträge, sondern echte Beispiele aus unserem Alltag.
+                            Unser Team nutzt KI jetzt täglich – <strong>selbstbewusst und effektiv</strong>."</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <strong>Lukas K.</strong>
+                                <span>Operations Manager, Startup Basel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tools & Platforms -->
+                <div class="social-proof">
+                    <p class="social-proof-title">Wir arbeiten und schulen mit den besten KI-Plattformen</p>
+                    <div class="logo-cloud">
+                        <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener" class="ai-logo">
+                            <img src="AI Logos/claude-app-icon.webp" alt="Claude AI">
+                        </a>
+                        <a href="https://www.make.com" target="_blank" rel="noopener" class="ai-logo">
+                            <img src="AI Logos/make-color.png" alt="Make.com Automation">
+                        </a>
+                        <a href="https://www.microsoft.com/microsoft-copilot" target="_blank" rel="noopener" class="ai-logo">
+                            <img src="AI Logos/microsoft_copilot-logo_brandlogos.net_zaqzr.png" alt="Microsoft Copilot">
+                        </a>
+                        <a href="https://n8n.io" target="_blank" rel="noopener" class="ai-logo">
+                            <img src="AI Logos/n8n_icon-logo_brandlogos.net_3mw34.png" alt="n8n Workflow Automation">
+                        </a>
+                        <a href="https://zapier.com" target="_blank" rel="noopener" class="ai-logo">
+                            <img src="AI Logos/zapier Logo PNG SVG Vector.png" alt="Zapier">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solutions Section -->
+        <section id="services">
+            <div class="container">
+                <h2>Lösungen für Ihre KI Reise</h2>
+                <div class="grid-3">
+                    <div class="card service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>KI Strategie & Roadmap</h3>
+                        <p>Gemeinsam analysieren wir Geschäftsmodell und Prozesse, identifizieren konkrete KI Use Cases
+                            und erstellen eine klare Roadmap mit Prioritäten und Aufwand. So erhält die Geschäftsleitung
+                            eine Entscheidungsgrundlage, welche Projekte zuerst starten.</p>
+                        <a href="#contact" class="text-link">Mehr erfahren &rarr;</a>
+                    </div>
+                    <div class="card service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>KI Workshops & Team-Trainings</h3>
+                        <p>Einsteiger Workshops für Teams ohne Erfahrung und Vertiefungstrainings für Marketing, Sales
+                            und Operations. Mit echten Beispielen aus Ihrem Alltag, Live Übungen und Vorlagen, die Ihr
+                            Team direkt weiter nutzt.</p>
+                        <a href="#contact" class="text-link">Mehr erfahren &rarr;</a>
+                    </div>
+                    <div class="card service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v4"/>
+                                <path d="m16.2 7.8 2.9-2.9"/>
+                                <path d="M18 12h4"/>
+                                <path d="m16.2 16.2 2.9 2.9"/>
+                                <path d="M12 18v4"/>
+                                <path d="m4.9 19.1 2.9-2.9"/>
+                                <path d="M2 12h4"/>
+                                <path d="m4.9 4.9 2.9 2.9"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3>Automatisierung & AI Workflows</h3>
+                        <p>Aufbau von KI gestützten Workflows mit Tools wie Make, Zapier, n8n oder Microsoft Copilot.
+                            Verknüpfung Ihrer bestehenden Systeme und Einrichtung von AI Assistenten, die E-Mails,
+                            Dokumente und Datenflüsse unterstützen.</p>
+                        <a href="#contact" class="text-link">Mehr erfahren &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section - VERBESSERT -->
+        <section id="use-cases">
+            <div class="container">
+                <h2>Konkrete Erfolgsgeschichten aus der Praxis</h2>
+                <p class="intro-text">Sehen Sie, wie Schweizer KMU mit KI messbare Resultate erzielen</p>
+
+                <div class="grid-3">
+                    <div class="card case-card">
+                        <div class="case-badge">Marketing Agentur Zürich</div>
+                        <h3>8 Stunden pro Woche gespart</h3>
+                        <p class="case-challenge"><strong>Ausgangslage:</strong> Social Media Content musste schneller produziert werden,
+                            ohne Qualitätsverlust.</p>
+                        <p class="case-solution"><strong>Lösung:</strong> KI gestützter Workflow für Kampagnenideen, Textvarianten
+                            und Bild-Prompts. Das Team reviewed nur noch und gibt finalen Schliff.</p>
+                        <div class="case-results">
+                            <div class="result-item">↗ 3x mehr Posts pro Woche</div>
+                            <div class="result-item">◷ 8h Zeitersparnis wöchentlich</div>
+                            <div class="result-item">◈ Höheres Engagement</div>
+                        </div>
+                    </div>
+
+                    <div class="card case-card">
+                        <div class="case-badge">Handelsunternehmen Bern</div>
+                        <h3>30% mehr Verkaufsabschlüsse</h3>
+                        <p class="case-challenge"><strong>Ausgangslage:</strong> Follow-ups gingen vergessen,
+                            Angebote waren zeitaufwändig zu erstellen.</p>
+                        <p class="case-solution"><strong>Lösung:</strong> Automatisierte Angebotserstellung mit KI,
+                            intelligentes CRM-Follow-up System und Priorisierung von Verkaufschancen.</p>
+                        <div class="case-results">
+                            <div class="result-item">↑ 30% höhere Conversion</div>
+                            <div class="result-item">◉ 0 verpasste Follow-ups</div>
+                            <div class="result-item">◬ 5h Zeitersparnis pro Woche</div>
+                        </div>
+                    </div>
+
+                    <div class="card case-card">
+                        <div class="case-badge">Startup Basel</div>
+                        <h3>Backoffice komplett automatisiert</h3>
+                        <p class="case-challenge"><strong>Ausgangslage:</strong> Kleine Teamgröße, viele administrative
+                            Aufgaben bremsten das Wachstum.</p>
+                        <p class="case-solution"><strong>Lösung:</strong> KI Assistenten für Standardmails, automatische
+                            Protokolle und Reporting-Dashboards mit AI-generierten Insights.</p>
+                        <div class="case-results">
+                            <div class="result-item">△ 60% weniger Admin-Zeit</div>
+                            <div class="result-item">◫ Tägliche Auto-Reports</div>
+                            <div class="result-item">◉ Fokus auf Kerngeschäft</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Section -->
+        <section id="offers">
+            <div class="container">
+                <h2>Konkrete Angebote für Ihr Team</h2>
+                <p class="intro-text">Transparente Preise. Garantierte Qualität. 14 Tage E-Mail Support inklusive.</p>
+
+                <div class="grid-3">
+                    <div class="card pricing-card">
+                        <h3>KI Einsteiger Workshop</h3>
+                        <p class="desc">Perfekt für Teams ohne Vorerfahrung.</p>
+                        <ul>
+                            <li>3 Stunden Online oder vor Ort</li>
+                            <li>Grundlagen generative KI</li>
+                            <li>Effektive Prompts schreiben</li>
+                            <li>Erste Automatisierungsbeispiele aus Ihrem Alltag</li>
+                            <li>Unterlagen und Vorlagen inklusive</li>
+                        </ul>
+                        <div class="price">Pauschal CHF 1'800 <span class="small">für bis zu 10 Teilnehmende</span></div>
+                        <button class="btn btn-primary full-width" onclick="openModal('workshop-beginner')">Workshop anfragen</button>
+                    </div>
+                    <div class="card pricing-card highlight">
+                        <h3>KI Team Training Tag</h3>
+                        <p class="desc">Ideal für KMU, die Prozesse gezielt verbessern wollen.</p>
+                        <ul>
+                            <li>1 Tag vor Ort in der Schweiz oder remote</li>
+                            <li>Vorab-Analyse Ihrer Abläufe</li>
+                            <li>Massgeschneiderte Übungen für Marketing, Vertrieb und Operations</li>
+                            <li>Unterlagen, Vorlagen und Checklisten</li>
+                            <li>14 Tage E-Mail Support nach dem Training</li>
+                        </ul>
+                        <div class="price">Pauschal CHF 3'500 <span class="small">für bis zu 12 Teilnehmende</span></div>
+                        <button class="btn btn-primary full-width" onclick="openModal('training-day')">Training planen</button>
+                        <div class="guarantee-badge">✓ 100% Zufriedenheitsgarantie</div>
+                    </div>
+                    <div class="card pricing-card">
+                        <h3>Individuelle KI Beratung</h3>
+                        <p class="desc">1:1 Sparring für Geschäftsführung und Bereichsleitende.</p>
+                        <ul>
+                            <li>Strategie und Priorisierung von KI Projekten</li>
+                            <li>Bewertung von Tools und Anbietern</li>
+                            <li>Begleitung von Pilotprojekten und Change</li>
+                            <li>Schriftliche Zusammenfassung der Empfehlungen</li>
+                        </ul>
+                        <div class="price">CHF 280 pro Stunde <span class="small">(Erstgespräch kostenlos)</span></div>
+                        <button class="btn btn-primary full-width" onclick="openModal('consulting')">Erstgespräch buchen</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section - VERBESSERT -->
+        <section id="about">
+            <div class="container about-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Warum Sie mit uns arbeiten sollten</h2>
+                        <p class="about-story">Wir verkaufen keine fertigen Lösungen – <strong>wir befähigen Ihr Team,
+                            KI selbstständig einzusetzen</strong>. In unseren Workshops lernen Ihre Mitarbeitenden,
+                            wie sie ChatGPT, Claude und andere KI-Tools eigenständig nutzen, um ihre täglichen
+                            Aufgaben zu vereinfachen.</p>
+
+                        <p>Unser Fokus liegt auf <strong>Wissenstransfer und Empowerment</strong>: Nach dem Training
+                            können Sie weitermachen – ohne Abhängigkeit von externen Dienstleistern. Wir zeigen Ihrem
+                            Team die Werkzeuge und Methoden, damit sie KI-Lösungen selbst umsetzen und weiterentwickeln
+                            können. So bleiben Sie flexibel und unabhängig.</p>
+
+                        <div class="about-credentials">
+                            <div class="credential-item">
+                                <span class="credential-icon">◎</span>
+                                <div>
+                                    <strong>Standort</strong>
+                                    <p>Schlieren bei Zürich – Workshops in der ganzen Schweiz</p>
+                                </div>
+                            </div>
+                            <div class="credential-item">
+                                <span class="credential-icon">◆</span>
+                                <div>
+                                    <strong>Spezialisierung</strong>
+                                    <p>KMU, Agenturen, Selbständige (5-50 Mitarbeitende)</p>
+                                </div>
+                            </div>
+                            <div class="credential-item">
+                                <span class="credential-icon">◘</span>
+                                <div>
+                                    <strong>Erfahrung</strong>
+                                    <p>20+ Jahre Sales, Marketing, Operations in der Schweiz</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image-section">
+                        <img src="Bilder/Anzug final.png" alt="Adrian Althaus bei einem KI Workshop" class="about-portrait">
+                        <div class="about-quote">
+                            <p>"Unser Ziel: Ihr Team nutzt KI selbstbewusst und eigenständig –
+                                nicht nur während des Workshops, sondern auch Monate danach."</p>
+                            <strong>— AIConsult.ch Team</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process">
+            <div class="container">
+                <h2>So starten wir gemeinsam</h2>
+                <div class="grid-3">
+                    <div class="card process-card">
+                        <div class="step-number">1</div>
+                        <h3>Kostenloses Erstgespräch</h3>
+                        <p>Wir klären Ziele, Ausgangslage und Erwartungen und prüfen, ob wir zusammenpassen.</p>
+                        <div class="process-duration">◷ 30 Minuten</div>
+                    </div>
+                    <div class="card process-card">
+                        <div class="step-number">2</div>
+                        <h3>Workshop oder Pilotprojekt</h3>
+                        <p>Wir testen konkrete Use Cases mit Ihrem Team und messen erste Resultate.</p>
+                        <div class="process-duration">◫ 1-5 Tage</div>
+                    </div>
+                    <div class="card process-card">
+                        <div class="step-number">3</div>
+                        <h3>Skalierung und Automatisierung</h3>
+                        <p>Wir übertragen erfolgreiche Ansätze in weitere Bereiche und verankern KI im Alltag Ihres
+                            Unternehmens.</p>
+                        <div class="process-duration">△ Laufend</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <div class="container">
+                <h2>Häufige Fragen</h2>
+                <div class="faq-grid">
+                    <div class="card faq-card">
+                        <h3>Für wen eignet sich AIConsult.ch?</h3>
+                        <p>Für Schweizer KMU, Agenturen und Selbständige, die KI nicht als Hype sehen, sondern als
+                            Werkzeug für den Alltag. Besonders geeignet für Teams mit 5-50 Mitarbeitenden.</p>
+                    </div>
+                    <div class="card faq-card">
+                        <h3>Braucht mein Team technische Vorkenntnisse?</h3>
+                        <p>Nein. Wichtig sind Offenheit, Interesse und die Bereitschaft, Neues auszuprobieren. Ich hole
+                            alle Teilnehmenden auf ihrem Niveau ab – vom absoluten Neuling bis zum Power-User.</p>
+                    </div>
+                    <div class="card faq-card">
+                        <h3>Mit welchen Tools arbeiten wir?</h3>
+                        <p>Wir nutzen vor allem ChatGPT, Claude, Make, Zapier, n8n und Microsoft Copilot sowie
+                            vorhandene Systeme wie CRM, Office oder PM Tools.</p>
+                    </div>
+                    <div class="card faq-card">
+                        <h3>Wie schnell sehen wir Resultate?</h3>
+                        <p>Erste Quick Wins gibt es oft direkt am Workshop-Tag. Automatisierungen sind meist innerhalb
+                            von 2-4 Wochen produktiv. Langfristige Veränderung braucht 2-3 Monate.</p>
+                    </div>
+                    <div class="card faq-card">
+                        <h3>Wie gehen wir mit Datenschutz um?</h3>
+                        <p>Wir sprechen klar über Datenflüsse, Zugriffsrechte und Risiken. Wo nötig nutzen wir
+                            datenschutzfreundliche Varianten, On Premise Lösungen oder geeignete Richtlinien.</p>
+                    </div>
+                    <div class="card faq-card">
+                        <h3>Was kostet eine Zusammenarbeit?</h3>
+                        <p>Ein 3-Stunden Workshop ab CHF 290/Person. Ein Team-Trainingstag pauschal CHF 1'200.
+                            Individuelle Beratung CHF 180/h. Erstgespräch immer kostenlos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contact -->
+    <footer id="contact">
+        <div class="container footer-container">
+            <div class="contact-info">
+                <h2>Bereit für den nächsten Schritt mit KI?</h2>
+                <p>Buchen Sie jetzt Ihr kostenloses 30-Minuten Erstgespräch.</p>
+                <div class="contact-details">
+                    <a href="mailto:adrian@aiconsult.ch" class="contact-link">adrian@aiconsult.ch</a>
+                    <a href="tel:+41797401021" class="contact-link">+41 79 740 10 21</a>
+                    <p class="contact-address">Brandstrasse 25, 8952 Schlieren</p>
+                </div>
+                <p class="note">✓ Antwort innerhalb von 24 Stunden · ✓ Unverbindlich · ✓ Kostenlos</p>
+
+                <div class="trust-badges">
+                    <div class="trust-badge">✓ 100% Swiss</div>
+                    <div class="trust-badge">✓ DSGVO konform</div>
+                    <div class="trust-badge">✓ 5.0 Kundenbewertung</div>
+                </div>
+            </div>
+            <div class="contact-form-wrapper card">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Firma</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic">Ich interessiere mich für</label>
+                        <select id="topic" name="topic">
+                            <option value="strategy">KI Strategie & Roadmap</option>
+                            <option value="workshop">Workshop / Training</option>
+                            <option value="automation">Automatisierung</option>
+                            <option value="consulting">Individuelle Beratung</option>
+                            <option value="other">Erstgespräch / Sonstiges</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nachricht *</label>
+                        <textarea id="message" name="message" rows="4" required
+                            placeholder="Beschreiben Sie kurz Ihre Situation und was Sie erreichen möchten..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Jetzt Erstgespräch anfragen</button>
+                    <p class="form-note">* Pflichtfelder</p>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AIConsult.ch. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Formulare -->
+    <!-- Modal 1: KI Einsteiger Workshop -->
+    <div id="modal-workshop-beginner" class="contact-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('workshop-beginner')">&times;</span>
+            <h2>KI Einsteiger Workshop anfragen</h2>
+            <form class="modal-form" id="form-workshop-beginner" onsubmit="submitForm(event, 'workshop-beginner')">
+                <input type="hidden" name="workshop_type" value="KI Einsteiger Workshop">
+
+                <div class="form-group">
+                    <label for="wb-name">Name *</label>
+                    <input type="text" id="wb-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="wb-email">E-Mail *</label>
+                    <input type="email" id="wb-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="wb-company">Firma *</label>
+                    <input type="text" id="wb-company" name="company" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="wb-participants">Anzahl Teilnehmende *</label>
+                    <select id="wb-participants" name="participants" required>
+                        <option value="">Bitte wählen</option>
+                        <option value="3-5">3-5 Personen</option>
+                        <option value="6-8">6-8 Personen</option>
+                        <option value="9-10">9-10 Personen</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="wb-format">Gewünschtes Format *</label>
+                    <select id="wb-format" name="format" required>
+                        <option value="">Bitte wählen</option>
+                        <option value="online">Online</option>
+                        <option value="vor-ort">Vor Ort</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="wb-timeframe">Gewünschter Zeitraum</label>
+                    <input type="text" id="wb-timeframe" name="timeframe" placeholder="z.B. März 2025">
+                </div>
+
+                <div class="form-group">
+                    <label for="wb-message">Ihre Nachricht / Besondere Wünsche</label>
+                    <textarea id="wb-message" name="message" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">Anfrage senden</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 2: KI Team Training Tag -->
+    <div id="modal-training-day" class="contact-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('training-day')">&times;</span>
+            <h2>KI Team Training Tag planen</h2>
+            <form class="modal-form" id="form-training-day" onsubmit="submitForm(event, 'training-day')">
+                <input type="hidden" name="workshop_type" value="KI Team Training Tag">
+
+                <div class="form-group">
+                    <label for="td-name">Name *</label>
+                    <input type="text" id="td-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="td-email">E-Mail *</label>
+                    <input type="email" id="td-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="td-company">Firma *</label>
+                    <input type="text" id="td-company" name="company" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="td-participants">Anzahl Teilnehmende *</label>
+                    <select id="td-participants" name="participants" required>
+                        <option value="">Bitte wählen</option>
+                        <option value="4-6">4-6 Personen</option>
+                        <option value="7-9">7-9 Personen</option>
+                        <option value="10-12">10-12 Personen</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="td-format">Gewünschtes Format *</label>
+                    <select id="td-format" name="format" required>
+                        <option value="">Bitte wählen</option>
+                        <option value="online">Online (remote)</option>
+                        <option value="vor-ort">Vor Ort in der Schweiz</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="td-departments">Welche Bereiche nehmen teil? *</label>
+                    <select id="td-departments" name="departments" required multiple size="3">
+                        <option value="marketing">Marketing</option>
+                        <option value="sales">Vertrieb / Sales</option>
+                        <option value="operations">Operations / Backoffice</option>
+                        <option value="management">Geschäftsleitung</option>
+                        <option value="other">Andere</option>
+                    </select>
+                    <small>Mehrfachauswahl möglich (Ctrl/Cmd + Klick)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="td-challenges">Welche konkreten Herausforderungen möchten Sie lösen?</label>
+                    <textarea id="td-challenges" name="challenges" rows="4" placeholder="z.B. Zeitaufwand für E-Mails reduzieren, Automatisierung von Reports..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="td-timeframe">Gewünschter Zeitraum</label>
+                    <input type="text" id="td-timeframe" name="timeframe" placeholder="z.B. Q2 2025">
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">Anfrage senden</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 3: Individuelle KI Beratung -->
+    <div id="modal-consulting" class="contact-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('consulting')">&times;</span>
+            <h2>Erstgespräch buchen</h2>
+            <form class="modal-form" id="form-consulting" onsubmit="submitForm(event, 'consulting')">
+                <input type="hidden" name="workshop_type" value="Individuelle KI Beratung">
+
+                <div class="form-group">
+                    <label for="c-name">Name *</label>
+                    <input type="text" id="c-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-email">E-Mail *</label>
+                    <input type="email" id="c-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-phone">Telefon</label>
+                    <input type="tel" id="c-phone" name="phone" placeholder="+41...">
+                </div>
+
+                <div class="form-group">
+                    <label for="c-company">Firma</label>
+                    <input type="text" id="c-company" name="company">
+                </div>
+
+                <div class="form-group">
+                    <label for="c-role">Ihre Funktion *</label>
+                    <select id="c-role" name="role" required>
+                        <option value="">Bitte wählen</option>
+                        <option value="geschaeftsfuehrung">Geschäftsführung</option>
+                        <option value="bereichsleitung">Bereichsleitung</option>
+                        <option value="projektleitung">Projektleitung</option>
+                        <option value="other">Andere</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-topics">Welche Themen interessieren Sie? *</label>
+                    <select id="c-topics" name="topics" required multiple size="4">
+                        <option value="ki-strategie">KI Strategie entwickeln</option>
+                        <option value="tool-evaluation">Tool-Evaluierung (ChatGPT, Copilot etc.)</option>
+                        <option value="use-case-priorisierung">Use Cases priorisieren</option>
+                        <option value="change-management">Change Management / Team-Adoption</option>
+                        <option value="pilotprojekt">Pilotprojekt begleiten</option>
+                    </select>
+                    <small>Mehrfachauswahl möglich (Ctrl/Cmd + Klick)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-goals">Was möchten Sie mit KI erreichen?</label>
+                    <textarea id="c-goals" name="goals" rows="4" placeholder="Beschreiben Sie kurz Ihre Ziele und Erwartungen..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-timeframe">Wann möchten Sie das Erstgespräch führen?</label>
+                    <input type="text" id="c-timeframe" name="timeframe" placeholder="z.B. diese Woche, nächste Woche...">
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">Erstgespräch anfragen</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/contact-forms.js"></script>
+    <script src="js/main-improved.js"></script>
+</body>
+
+</html>

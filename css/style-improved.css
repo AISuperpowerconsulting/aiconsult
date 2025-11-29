@@ -77,20 +77,72 @@ h6 {
     line-height: 1.2;
 }
 
+/* Kinetic Typography */
 h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
+    background: linear-gradient(120deg,
+                var(--wave-cyan),
+                var(--wave-blue),
+                var(--wave-violet),
+                var(--wave-cyan));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: kineticGradient 8s ease infinite;
+    transition: letter-spacing 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes kineticGradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+h1:hover {
+    letter-spacing: 0.02em;
+    transform: scale(1.02);
 }
 
 h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    transition: letter-spacing 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+h2:hover {
+    letter-spacing: 0.015em;
+    color: var(--primary);
+}
+
+h2:hover::after {
+    width: 100px;
 }
 
 h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h3:hover {
+    color: var(--primary);
+    transform: translateX(3px);
 }
 
 a {
@@ -115,11 +167,98 @@ img {
     padding: 0 2rem;
 }
 
+/* Bento Grid Layout */
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
+}
+
+/* Bento Grid for Services Section */
+#services .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 200px;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+#services .service-card:nth-child(1) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+#services .service-card:nth-child(2) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+#services .service-card:nth-child(3) {
+    grid-column: span 6;
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#services .service-card:nth-child(3) .service-icon {
+    margin: 0;
+}
+
+#services .service-card:nth-child(3) p {
+    margin: 0;
+}
+
+#services .service-card:nth-child(3) .text-link {
+    white-space: nowrap;
+}
+
+/* Responsive Bento Grid */
+@media (max-width: 968px) {
+    #services .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 250px;
+    }
+
+    #services .service-card:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    #services .service-card:nth-child(2) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    #services .service-card:nth-child(3) {
+        grid-column: span 2;
+        grid-row: span 2;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        text-align: center;
+    }
+
+    #services .service-card:nth-child(3) .service-icon {
+        margin: 0 auto 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #services .grid-3 {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    #services .service-card:nth-child(1),
+    #services .service-card:nth-child(2),
+    #services .service-card:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 .full-width {
@@ -326,7 +465,7 @@ img {
     -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
-/* Buttons */
+/* Buttons - Enhanced Micro-Interactions */
 .btn {
     font-family: inherit;
     font-weight: 600;
@@ -334,13 +473,15 @@ img {
     padding: 0.85rem 1.7rem;
     border: 1px solid transparent;
     cursor: pointer;
-    transition: background-color 0.18s ease,
-        color 0.18s ease,
-        border-color 0.18s ease,
-        box-shadow 0.18s ease,
-        transform 0.12s ease;
+    transition: background-color 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     display: inline-block;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
@@ -348,17 +489,50 @@ img {
             var(--wave-cyan),
             var(--wave-blue),
             var(--wave-violet));
+    background-size: 200% 200%;
     color: #020617;
     box-shadow: 0 18px 40px rgba(79, 157, 255, 0.5);
+    animation: gradientFlow 3s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+                height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-primary:hover {
-    box-shadow: 0 20px 50px rgba(79, 157, 255, 0.75);
-    transform: translateY(-1px);
+    box-shadow: 0 20px 50px rgba(79, 157, 255, 0.75),
+                0 0 30px rgba(55, 230, 255, 0.4);
+    transform: translateY(-3px) scale(1.05);
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary:active {
+    transform: translateY(-1px) scale(1.02);
 }
 
 .btn-secondary {
-    background: transparent;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: var(--text-primary);
     border-color: var(--primary-soft);
 }
@@ -366,6 +540,8 @@ img {
 .btn-secondary:hover {
     background: rgba(15, 23, 42, 0.9);
     border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(55, 230, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 .btn-sm {
@@ -379,12 +555,35 @@ img {
 .btn-sm:hover {
     border-color: var(--primary);
     background: rgba(55, 230, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(55, 230, 255, 0.15);
+    transform: translateY(-1px);
 }
 
-/* Sections */
+/* Sections - Enhanced with Scroll Effects */
 section {
     background-color: var(--bg-main);
     padding: var(--section-padding);
+    position: relative;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle,
+                rgba(55, 230, 255, 0.03),
+                transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+section.in-view::before {
+    opacity: 1;
 }
 
 #offers,
@@ -392,6 +591,18 @@ section {
 #faq,
 #contact {
     background-color: var(--bg-soft);
+}
+
+#offers::before {
+    background: radial-gradient(circle,
+                rgba(178, 102, 255, 0.03),
+                transparent 70%);
+}
+
+#about::before {
+    background: radial-gradient(circle,
+                rgba(255, 198, 92, 0.03),
+                transparent 70%);
 }
 
 .intro-text {
@@ -402,24 +613,59 @@ section {
     color: var(--text-body);
 }
 
-/* Cards */
+/* Cards - Enhanced Glassmorphism */
 .card {
     background: radial-gradient(circle at top left,
             rgba(79, 157, 255, 0.14),
             rgba(15, 23, 42, 0.96));
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
     border-radius: 1.25rem;
     border: 1px solid var(--border-subtle);
-    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.85);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.85),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
     padding: 1.6rem 1.8rem;
-    transition: transform 0.12s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.3s ease,
+                border-color 0.3s ease,
+                backdrop-filter 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(55, 230, 255, 0.08),
+                transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
 .card:hover {
     border-color: var(--primary-soft);
-    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.95);
-    transform: translateY(-2px);
+    box-shadow: 0 22px 60px rgba(15, 23, 42, 0.95),
+                0 0 40px rgba(55, 230, 255, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-6px) scale(1.02);
+    backdrop-filter: blur(16px) saturate(200%);
+    -webkit-backdrop-filter: blur(16px) saturate(200%);
+}
+
+.card > * {
+    position: relative;
+    z-index: 1;
 }
 
 /* Benefits */

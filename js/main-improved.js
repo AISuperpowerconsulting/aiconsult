@@ -123,14 +123,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = {
                 name: document.getElementById('name').value,
-                company: document.getElementById('company').value,
                 email: document.getElementById('email').value,
                 topic: document.getElementById('topic').value,
                 message: document.getElementById('message').value
             };
 
-            // Basic validation
-            if (!formData.name || !formData.email || !formData.message) {
+            // Basic validation (message is now optional)
+            if (!formData.name || !formData.email) {
                 alert('Bitte füllen Sie alle Pflichtfelder aus.');
                 return;
             }
@@ -326,6 +325,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const scrollPercent = (scrollTop / docHeight) * 100;
         progressBar.style.width = scrollPercent + '%';
     });
+
+    // ========================================
+    // Sticky CTA Button (Conversion Optimization)
+    // ========================================
+
+    const stickyCta = document.getElementById('sticky-cta');
+    if (stickyCta) {
+        window.addEventListener('scroll', () => {
+            // Show sticky CTA after scrolling past hero section (800px)
+            if (window.scrollY > 800) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+
+            // Hide sticky CTA when user reaches contact section
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                const contactTop = contactSection.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (contactTop < windowHeight / 2) {
+                    stickyCta.classList.remove('visible');
+                }
+            }
+        });
+    }
 
     console.log('AIConsult.ch Enhanced - Loaded successfully! 🚀');
 });

@@ -4,12 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI Beratung Schweiz | Workshops & Training für KMU | AIConsult</title>
+    <title>KI Beratung & Workshops für Schweizer KMU | AIConsult.ch Zürich</title>
     <meta name="description"
-        content="KI-Beratung & Schulungen für Schweizer KMU – ohne Fachchinesisch, mit messbaren Resultaten. Machen Sie Ihr Team jetzt KI-fit. Kostenloses Erstgespräch vereinbaren!">
+        content="KI Beratung, Workshops & Automatisierung für KMU in Zürich, Bern, Basel. Praxisnah, ohne Fachchinesisch. Ab CHF 1'800. ✓ Gratis Erstgespräch ✓ 100+ geschulte Personen ✓ Messbare Resultate.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="img/logo-aiconsult-white.png">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2JNT2YNJ9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-L2JNT2YNJ9', {
+            'anonymize_ip': true,
+            'cookie_flags': 'SameSite=None;Secure'
+        });
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ut2n0uzu3i");
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,9 +44,10 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "AIConsult.ch",
-      "description": "KI-Beratung, Workshops und Automatisierung für Schweizer KMU",
+      "@type": "LocalBusiness",
+      "name": "AIConsult.ch - KI Beratung & Workshops für Schweizer KMU",
+      "image": "https://www.aiconsult.ch/img/logo-aiconsult-white.png",
+      "description": "KI-Beratung, Workshops und Automatisierung für Schweizer KMU in Zürich, Bern, Basel und der ganzen Schweiz. Praxisnahe Schulungen ohne Fachchinesisch.",
       "url": "https://www.aiconsult.ch",
       "telephone": "+41797401021",
       "email": "adrian@aiconsult.ch",
@@ -33,6 +55,7 @@
         "@type": "PostalAddress",
         "streetAddress": "Brandstrasse 25",
         "addressLocality": "Schlieren",
+        "addressRegion": "Zürich",
         "postalCode": "8952",
         "addressCountry": "CH"
       },
@@ -41,12 +64,72 @@
         "latitude": "47.3969",
         "longitude": "8.4453"
       },
-      "areaServed": "CH",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Zürich"
+        },
+        {
+          "@type": "City",
+          "name": "Bern"
+        },
+        {
+          "@type": "City",
+          "name": "Basel"
+        },
+        {
+          "@type": "Country",
+          "name": "Schweiz"
+        }
+      ],
       "priceRange": "CHF 1800-3500",
       "openingHours": "Mo-Fr 09:00-18:00",
       "sameAs": [
         "https://github.com/AISuperpowerconsulting"
-      ]
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "15"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "KI Workshop für Einsteiger",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "AIConsult.ch"
+      },
+      "areaServed": "CH",
+      "offers": {
+        "@type": "Offer",
+        "price": "1800",
+        "priceCurrency": "CHF",
+        "description": "3-stündiger KI Einsteiger Workshop für bis zu 10 Teilnehmende - Online oder vor Ort"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "KI Team Training Tag",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "AIConsult.ch"
+      },
+      "areaServed": "CH",
+      "offers": {
+        "@type": "Offer",
+        "price": "3500",
+        "priceCurrency": "CHF",
+        "description": "Ganztägiges KI Team Training für bis zu 12 Teilnehmende mit individueller Vorab-Analyse"
+      }
     }
     </script>
 
@@ -120,6 +203,12 @@
         </div>
     </nav>
 
+    <!-- Sticky CTA Button -->
+    <a href="#contact" id="sticky-cta" class="sticky-cta" aria-label="Kostenloses Erstgespräch buchen">
+        <span class="sticky-cta-text">Gratis-Erstgespräch</span>
+        <span class="sticky-cta-icon">→</span>
+    </a>
+
     <!-- Hero Section -->
     <header id="hero">
         <div class="hero-bg">
@@ -130,9 +219,10 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <span class="overline" data-i18n="hero.overline">SWISS AI CONSULTING</span>
-                <h1 data-i18n="hero.title">Ihr Team wird KI lieben – nicht fürchten</h1>
+                <h1 data-i18n="hero.title">KI Beratung & Workshops für Schweizer KMU</h1>
+                <p class="hero-slogan">Damit Ihr Team KI liebt und nicht fürchtet – praxisnah und ohne Fachchinesisch</p>
                 <p class="subline" data-i18n="hero.subtitle">Praxisnahe KI Workshops und Automatisierungen für Schweizer KMU.
-                    Ohne Fachchinesisch. Mit messbaren Resultaten. Von jemandem, der Ihren Alltag kennt.</p>
+                    Mit messbaren Resultaten. Von jemandem, der Ihren Alltag kennt.</p>
                 <div class="cta-group">
                     <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_primary">Jetzt 30min Gratis-Analyse buchen</a>
                     <a href="#testimonials" class="btn btn-secondary" data-i18n="hero.cta_secondary">Erfolgsgeschichten ansehen</a>
@@ -461,15 +551,15 @@
                             <div class="credential-item">
                                 <span class="credential-icon">◎</span>
                                 <div>
-                                    <strong>Standort</strong>
-                                    <p>Schlieren bei Zürich – Workshops in der ganzen Schweiz</p>
+                                    <strong>Standort & Einsatzgebiet</strong>
+                                    <p>Büro in Schlieren bei Zürich – Workshops vor Ort in Zürich, Bern, Basel und der ganzen Schweiz oder remote</p>
                                 </div>
                             </div>
                             <div class="credential-item">
                                 <span class="credential-icon">◆</span>
                                 <div>
                                     <strong>Spezialisierung</strong>
-                                    <p>KMU, Agenturen, Selbständige (5-50 Mitarbeitende)</p>
+                                    <p>Schweizer KMU, Agenturen, Selbständige (5-50 Mitarbeitende)</p>
                                 </div>
                             </div>
                             <div class="credential-item">
@@ -581,36 +671,34 @@
                 </div>
             </div>
             <div class="contact-form-wrapper card">
+                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Gratis-Erstgespräch buchen</h3>
+                <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">In 30 Minuten klären wir, wie KI Ihr Team weiterbringt. Kostenlos und unverbindlich.</p>
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Ihr Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="z.B. Sarah Müller">
                     </div>
                     <div class="form-group">
-                        <label for="company">Firma</label>
-                        <input type="text" id="company" name="company">
+                        <label for="email">E-Mail Adresse *</label>
+                        <input type="email" id="email" name="email" required placeholder="ihre@email.ch">
                     </div>
                     <div class="form-group">
-                        <label for="email">E-Mail *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="topic">Ich interessiere mich für</label>
+                        <label for="topic">Worum geht es hauptsächlich?</label>
                         <select id="topic" name="topic">
-                            <option value="strategy">KI Strategie & Roadmap</option>
-                            <option value="workshop">Workshop / Training</option>
-                            <option value="automation">Automatisierung</option>
+                            <option value="workshop">KI Workshop für mein Team</option>
+                            <option value="automation">Prozesse automatisieren</option>
+                            <option value="strategy">KI Strategie entwickeln</option>
                             <option value="consulting">Individuelle Beratung</option>
-                            <option value="other">Erstgespräch / Sonstiges</option>
+                            <option value="other">Einfach mal kennenlernen</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Nachricht *</label>
-                        <textarea id="message" name="message" rows="4" required
-                            placeholder="Beschreiben Sie kurz Ihre Situation und was Sie erreichen möchten..."></textarea>
+                        <label for="message">Kurze Nachricht (optional)</label>
+                        <textarea id="message" name="message" rows="3"
+                            placeholder="Z.B. Teamgrösse, konkrete Herausforderung, gewünschter Zeitraum..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary full-width">Jetzt Erstgespräch anfragen</button>
-                    <p class="form-note">* Pflichtfelder</p>
+                    <button type="submit" class="btn btn-primary full-width">Jetzt Gratis-Erstgespräch anfragen</button>
+                    <p class="form-note">✓ Kostenlos · ✓ Unverbindlich · ✓ Antwort in 24h</p>
                 </form>
             </div>
         </div>
@@ -815,6 +903,7 @@
     <script src="js/translations.js"></script>
     <script src="js/contact-forms.js"></script>
     <script src="js/main-improved.js"></script>
+    <script src="js/tracking.js"></script>
 </body>
 
 </html>

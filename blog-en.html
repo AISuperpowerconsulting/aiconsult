@@ -94,7 +94,7 @@
                             GDPR-compliant usage, Swiss Data Protection Act, ChatGPT Business vs Free – the complete guide for legally secure AI usage in Swiss businesses.
                         </p>
                     </div>
-                    <div style="background: url('./img/chatgpt-datenschutz-schweiz-hero.png?v=3') center/cover; min-height: 300px;"></div>
+                    <div style="background: url('./blog/img/chatgpt-datenschutz-schweiz-hero.png?v=3') center/cover; min-height: 300px;"></div>
                 </a>
             </section>
 
@@ -106,7 +106,7 @@
 
                     <!-- Article 2 -->
                     <a href="/chatgpt-vs-claude-vergleich/index-en.html" class="card" style="text-decoration: none; display: flex; flex-direction: column;">
-                        <div style="height: 200px; background: url('./img/chatgpt-vs-claude-hero.png?v=3') center/cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1.5rem;"></div>
+                        <div style="height: 200px; background: url('./blog/img/chatgpt-vs-claude-hero.png?v=3') center/cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1.5rem;"></div>
                         <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(178, 102, 255, 0.1); border: 1px solid var(--secondary); color: var(--secondary); font-size: 0.75rem; font-weight: 600; border-radius: 4px; margin-bottom: 1rem; align-self: flex-start;">TOOL COMPARISON</span>
                         <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">ChatGPT vs. Claude for Swiss SMEs: The 2025 Comparison</h3>
                         <p style="color: var(--text-body); margin-bottom: 1rem; flex-grow: 1;">
@@ -116,7 +116,7 @@
 
                     <!-- Article 3 -->
                     <a href="/microsoft-copilot-kmu/index-en.html" class="card" style="text-decoration: none; display: flex; flex-direction: column;">
-                        <div style="height: 200px; background: url('./img/microsoft-copilot-kmu-hero.png?v=3') center/cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1.5rem;"></div>
+                        <div style="height: 200px; background: url('./blog/img/microsoft-copilot-kmu-hero.png?v=3') center/cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1.5rem;"></div>
                         <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(255, 199, 92, 0.1); border: 1px solid var(--accent-warm); color: var(--accent-warm); font-size: 0.75rem; font-weight: 600; border-radius: 4px; margin-bottom: 1rem; align-self: flex-start;">ROI ANALYSIS</span>
                         <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">Microsoft Copilot for SMEs: Is the Investment Worth It?</h3>
                         <p style="color: var(--text-body); margin-bottom: 1rem; flex-grow: 1;">
@@ -126,7 +126,7 @@
 
                     <!-- Article 4 -->
                     <a href="/chatgpt-anwendungsfaelle-kmu/index-en.html" class="card" style="text-decoration: none; display: flex; flex-direction: column;">
-                        <div style="height: 200px; background: url('./img/chatgpt-anwendungsfaelle-kmu-hero.png?v=3') center/cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1.5rem;"></div>
+                        <div style="height: 200px; background: url('./blog/img/chatgpt-anwendungsfaelle-kmu-hero.png?v=3') center/cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1.5rem;"></div>
                         <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(55, 230, 255, 0.1); border: 1px solid var(--primary); color: var(--primary); font-size: 0.75rem; font-weight: 600; border-radius: 4px; margin-bottom: 1rem; align-self: flex-start;">PRACTICAL GUIDE</span>
                         <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">5 ChatGPT Use Cases for Swiss SMEs (with Prompts)</h3>
                         <p style="color: var(--text-body); margin-bottom: 1rem; flex-grow: 1;">
@@ -136,7 +136,7 @@
 
                     <!-- Article 5 -->
                     <a href="/ki-automatisierung-handwerk/index-en.html" class="card" style="text-decoration: none; display: flex; flex-direction: column;">
-                        <div style="height: 200px; background: url('./img/ki-automatisierung-handwerk-hero.png?v=3') center/cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1.5rem;"></div>
+                        <div style="height: 200px; background: url('./blog/img/ki-automatisierung-handwerk-hero.png?v=3') center/cover; border-radius: 8px 8px 0 0; margin: -1.5rem -1.5rem 1.5rem;"></div>
                         <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(178, 102, 255, 0.1); border: 1px solid var(--secondary); color: var(--secondary); font-size: 0.75rem; font-weight: 600; border-radius: 4px; margin-bottom: 1rem; align-self: flex-start;">INDUSTRY: TRADES</span>
                         <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">AI Automation for Trade Businesses: 3 Practical Examples</h3>
                         <p style="color: var(--text-body); margin-bottom: 1rem; flex-grow: 1;">
@@ -171,7 +171,26 @@
         </div>
     </footer>
 
-    <script src="../js/main-improved.js"></script>
+    <script src="./js/main-improved.js"></script>
+    <script>
+        // Language Switcher with localStorage persistence (synced with main page)
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('lang');
+
+            // If German is preferred and we're on English page, redirect
+            if (savedLang === 'de') {
+                window.location.href = '/blog';
+            }
+
+            // Handle language button clicks
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const lang = this.textContent.trim().toLowerCase();
+                    localStorage.setItem('lang', lang);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

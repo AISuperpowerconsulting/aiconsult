@@ -11,8 +11,9 @@ const translations = {
         },
         hero: {
             overline: "SWISS AI CONSULTING",
-            title: "Ihr Team wird KI lieben – nicht fürchten",
-            subtitle: "Praxisnahe KI Workshops und Automatisierungen für Schweizer KMU. Ohne Fachchinesisch. Mit messbaren Resultaten. Von jemandem, der Ihren Alltag kennt.",
+            title: "KI Beratung & Workshops für Schweizer KMU",
+            slogan: "Damit Ihr Team KI liebt und nicht fürchtet – praxisnah und ohne Fachchinesisch",
+            subtitle: "Praxisnahe KI Workshops und Automatisierungen für Schweizer KMU. Mit messbaren Resultaten. Von jemandem, der Ihren Alltag kennt.",
             cta_primary: "Jetzt 30min Gratis-Analyse buchen",
             cta_secondary: "Erfolgsgeschichten ansehen",
             trust: "Jahre Erfahrung · geschulte Personen · Schweizer KMU vertrauen uns"
@@ -65,9 +66,10 @@ const translations = {
         },
         hero: {
             overline: "SWISS AI CONSULTING",
-            title: "Your team will love AI – not fear it",
-            subtitle: "Practical AI workshops and automation for Swiss SMEs. Without jargon. With measurable results. From someone who knows your daily business.",
-            cta_primary: "Book free 30min analysis now",
+            title: "AI Consulting & Workshops for Swiss SMEs",
+            slogan: "So your team loves AI instead of fearing it – practical and without jargon",
+            subtitle: "Practical AI workshops and automation for Swiss SMEs. With measurable results. From someone who knows your daily business.",
+            cta_primary: "Book free 30min consultation",
             cta_secondary: "View success stories",
             trust: "years of experience · people trained · Swiss SMEs trust us"
         },

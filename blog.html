@@ -85,7 +85,7 @@
             <!-- Featured Article -->
             <section style="margin-bottom: 4rem;">
                 <h2 style="margin-bottom: 2rem; font-size: 1.5rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Meistgelesen</h2>
-                <a href="/chatgpt-datenschutz-schweiz/" class="card" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; text-decoration: none; padding: 0; overflow: hidden; transition: transform 0.3s ease;">
+                <a href="/chatgpt-datenschutz-schweiz/" class="card featured-article" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; text-decoration: none; padding: 0; overflow: hidden; transition: transform 0.3s ease;">
                     <div style="padding: 2.5rem;">
                         <span style="display: inline-block; padding: 0.5rem 1rem; background: rgba(55, 230, 255, 0.1); border: 1px solid var(--primary); color: var(--primary); font-size: 0.75rem; font-weight: 600; border-radius: 4px; margin-bottom: 1rem;">DATENSCHUTZ</span>
                         <h3 style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">ChatGPT Datenschutz Schweiz: Was KMU 2025 beachten müssen</h3>
@@ -169,6 +169,24 @@
             <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2025 AIConsult.ch. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <style>
+        /* Mobile responsive for featured article */
+        @media (max-width: 768px) {
+            .featured-article {
+                grid-template-columns: 1fr !important;
+            }
+            .featured-article > div:first-child {
+                order: 2;
+                padding: 1.5rem !important;
+            }
+            .featured-article > div:last-child {
+                order: 1;
+                min-height: 250px !important;
+                border-radius: 8px 8px 0 0 !important;
+            }
+        }
+    </style>
 
     <script src="./js/main-improved.js"></script>
     <script>

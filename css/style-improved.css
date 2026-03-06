@@ -588,6 +588,7 @@ section.in-view::before {
 
 #offers,
 #about,
+#digital-products,
 #faq,
 #contact {
     background-color: var(--bg-soft);

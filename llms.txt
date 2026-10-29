@@ -1,0 +1,39 @@
+# AIConsult.ch
+
+> AIConsult.ch is a Swiss AI consultancy for retail and e-commerce, run by Adrian Althaus in Schlieren near Zurich. It offers compact, fixed-price AI workshops and automations for importers, brand distributors and online retailers in German-speaking Switzerland. Website language: German (formal "Sie").
+
+## Who is behind it
+
+- Adrian Althaus, founder and consultant (Althaus Online, sole proprietorship, UID CHE-496.054.967, Brandstrasse 25, 8952 Schlieren, Switzerland)
+- 20+ years in Swiss consumer goods sales: Head of Sales and Head of Product Management at Samsung Electronics Switzerland, Category Management at Migros
+- CAS AI Management, HWZ Zurich University of Applied Sciences in Business Administration (2026); thesis: a multi-agent system ("Headcount Zero")
+- Runs alcfree.ch, a Shopify shop for alcohol-free wine and spirits, largely automated with AI (product data entry reduced from 20 to 3 minutes per item, about 90% less time for inventory management)
+
+## Offers (fixed prices, CHF)
+
+- KI-Startpaket (CHF 2'400, up to 12 participants): AI usage policy oriented on the Swiss Data Protection Act (DSG), 3-hour workshop with the company's own use cases, attendance confirmation as training record, 30 days of email questions
+- Workshop "KI im Vertrieb & Key Account Management" (CHF 2'200, half day, up to 12 participants): sell-out reporting and market analysis with AI, preparing annual negotiations with retail buyers, quotes and follow-ups
+- E-Commerce-Automatisierung (from CHF 3'800): analysis plus 1–2 automations for Shopify shops (product data, inventory, customer emails) with Shopify, Make or n8n
+- Sparring for management and sales leadership: CHF 220 per hour
+- Free 30-minute potential check ("Potenzialcheck")
+- Not offered: large IT or integration projects
+
+## Good fit
+
+- Importers and brand distributors (e.g. beverages, food, sports, household, beauty) with 3–200 employees
+- Online retailers and Shopify merchants in Switzerland
+- Sales and key account teams that want to use AI with their own data
+
+## Pages
+
+- [Homepage](https://www.aiconsult.ch/): positioning, offers, practical example, about Adrian Althaus, FAQ, contact
+- [Blog](https://www.aiconsult.ch/blog): articles on AI for Swiss SMEs
+- [KI-Governance für Schweizer KMU](https://www.aiconsult.ch/ki-governance-fuer-schweizer-kmu-dein-weg-zur-compliance-202)
+- [ChatGPT Datenschutz Schweiz](https://www.aiconsult.ch/chatgpt-datenschutz-schweiz)
+- [Impressum](https://www.aiconsult.ch/impressum)
+
+## Contact
+
+- Email: adrian@aiconsult.ch
+- Phone: +41 79 740 10 21
+- LinkedIn: https://www.linkedin.com/in/AdrianAlthaus

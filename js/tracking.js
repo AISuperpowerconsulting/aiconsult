@@ -16,69 +16,7 @@ function trackEvent(eventName, eventParams = {}) {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🎯 AIConsult.ch Tracking initialized');
 
-    // ========================================
-    // 1. FORM SUBMISSION TRACKING
-    // ========================================
-
-    // Main Contact Form
-    const mainContactForm = document.getElementById('contactForm');
-    if (mainContactForm) {
-        mainContactForm.addEventListener('submit', (e) => {
-            const topic = document.getElementById('topic')?.value || 'unknown';
-            trackEvent('generate_lead', {
-                'form_name': 'main_contact_form',
-                'form_location': 'footer',
-                'lead_type': topic,
-                'value': 0,
-                'currency': 'CHF'
-            });
-        });
-    }
-
-    // Modal Form: KI Einsteiger Workshop
-    const workshopBeginnerForm = document.getElementById('form-workshop-beginner');
-    if (workshopBeginnerForm) {
-        workshopBeginnerForm.addEventListener('submit', (e) => {
-            trackEvent('generate_lead', {
-                'form_name': 'workshop_beginner',
-                'form_location': 'modal',
-                'lead_type': 'workshop',
-                'value': 1800,
-                'currency': 'CHF',
-                'item_name': 'KI Einsteiger Workshop'
-            });
-        });
-    }
-
-    // Modal Form: KI Team Training Tag
-    const trainingDayForm = document.getElementById('form-training-day');
-    if (trainingDayForm) {
-        trainingDayForm.addEventListener('submit', (e) => {
-            trackEvent('generate_lead', {
-                'form_name': 'training_day',
-                'form_location': 'modal',
-                'lead_type': 'training',
-                'value': 3500,
-                'currency': 'CHF',
-                'item_name': 'KI Team Training Tag'
-            });
-        });
-    }
-
-    // Modal Form: Individuelle Beratung
-    const consultingForm = document.getElementById('form-consulting');
-    if (consultingForm) {
-        consultingForm.addEventListener('submit', (e) => {
-            trackEvent('generate_lead', {
-                'form_name': 'consulting',
-                'form_location': 'modal',
-                'lead_type': 'consulting',
-                'value': 280,
-                'currency': 'CHF',
-                'item_name': 'Individuelle KI Beratung'
-            });
-        });
-    }
+    // Lead events (generate_lead) are sent from js/contact-forms.js after a successful submission
 
     // ========================================
     // 2. CTA BUTTON CLICK TRACKING
@@ -120,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Pricing Card Buttons (track which offer is clicked)
-    const pricingButtons = document.querySelectorAll('.pricing-card button');
+    const pricingButtons = document.querySelectorAll('.pricing-card .btn');
     pricingButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
             const card = button.closest('.pricing-card');
@@ -139,45 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 'offer_name': offerName,
                 'offer_price': price
             });
-        });
-    });
-
-    // ========================================
-    // 3. MODAL TRACKING
-    // ========================================
-
-    // Track modal opens (when user clicks "Workshop anfragen" etc.)
-    window.openModal = function(modalId) {
-        const modal = document.getElementById('modal-' + modalId);
-        if (modal) {
-            modal.style.display = 'block';
-
-            // Track modal opening
-            trackEvent('modal_open', {
-                'modal_name': modalId,
-                'modal_type': 'contact_form'
-            });
-        }
-    };
-
-    window.closeModal = function(modalId) {
-        const modal = document.getElementById('modal-' + modalId);
-        if (modal) {
-            modal.style.display = 'none';
-
-            trackEvent('modal_close', {
-                'modal_name': modalId
-            });
-        }
-    };
-
-    // Close modal when clicking outside
-    document.querySelectorAll('.contact-modal').forEach(modal => {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                const modalId = modal.id.replace('modal-', '');
-                closeModal(modalId);
-            }
         });
     });
 
@@ -245,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================
 
     // Track when important sections come into view
-    const sectionsToTrack = ['#why-ai', '#services', '#offers', '#testimonials', '#about', '#faq'];
+    const sectionsToTrack = ['#why-ai', '#services', '#offers', '#proof', '#about', '#faq'];
 
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

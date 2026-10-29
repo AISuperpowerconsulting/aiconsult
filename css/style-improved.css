@@ -713,7 +713,7 @@ section.in-view::before {
 }
 
 .pricing-card.highlight h3::after {
-    content: "Beliebtes Angebot";
+    content: "Schwerpunkt";
     display: inline-block;
     margin-left: 0.75rem;
     padding: 0.18rem 0.65rem;
@@ -1761,4 +1761,82 @@ footer {
     color: var(--text-body);
     font-weight: 500;
     margin-bottom: 0.5rem;
+}
+/* Contact form status & spam honeypot */
+.form-honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+.form-status {
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.form-status[data-type="success"] {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #86efac;
+}
+
+.form-status[data-type="info"] {
+    background: rgba(55, 230, 255, 0.08);
+    border: 1px solid rgba(55, 230, 255, 0.3);
+    color: var(--text-body);
+}
+
+.form-status[data-type="error"] {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fca5a5;
+}
+
+.form-note a,
+.footer-bottom a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Legal pages (Impressum, Datenschutz) */
+.legal-page {
+    max-width: 760px;
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+.legal-page h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+    .legal-page h1 {
+        font-size: 1.7rem;
+    }
+}
+
+.legal-page h2 {
+    font-size: 1.3rem;
+    margin: 2rem 0 0.75rem;
+}
+
+.legal-page p,
+.legal-page li {
+    color: var(--text-body);
+    line-height: 1.7;
+}
+
+.legal-page ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.legal-page a {
+    color: var(--primary);
 }

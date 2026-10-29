@@ -5,18 +5,17 @@ const translations = {
             why: "Warum KI",
             solutions: "Lösungen",
             offers: "Angebote",
-            success: "Erfolge",
-            about: "Über uns",
+            success: "Praxis",
+            about: "Über mich",
             contact: "Kontakt"
         },
         hero: {
-            overline: "SWISS AI CONSULTING",
-            title: "KI Beratung & Workshops für Schweizer KMU",
-            slogan: "Damit Ihr Team KI liebt und nicht fürchtet – praxisnah und ohne Fachchinesisch",
-            subtitle: "Praxisnahe KI Workshops und Automatisierungen für Schweizer KMU. Mit messbaren Resultaten. Von jemandem, der Ihren Alltag kennt.",
-            cta_primary: "Jetzt 30min Gratis-Analyse buchen",
-            cta_secondary: "Erfolgsgeschichten ansehen",
-            trust: "Jahre Erfahrung · geschulte Personen · Schweizer KMU vertrauen uns"
+            overline: "KI FÜR HANDEL & E-COMMERCE",
+            title: "KI für Vertrieb und Onlinehandel in der Schweiz",
+            slogan: "Von jemandem, der beides selbst macht: 20 Jahre Konsumgüter-Vertrieb und ein eigener, mit KI automatisierter Onlineshop.",
+            subtitle: "Kompakte Workshops und Automatisierungen für Importeure, Markenvertriebe und Online-Händler. Fixpreise, sofort im Alltag nutzbar.",
+            cta_primary: "Kostenlosen Potenzialcheck anfragen",
+            cta_secondary: "Praxisbeispiel ansehen"
         },
         why: {
             title: "Warum KI für Schweizer KMU jetzt wichtig ist",
@@ -60,18 +59,17 @@ const translations = {
             why: "Why AI",
             solutions: "Solutions",
             offers: "Offers",
-            success: "Success Stories",
-            about: "About us",
+            success: "In practice",
+            about: "About me",
             contact: "Contact"
         },
         hero: {
-            overline: "SWISS AI CONSULTING",
-            title: "AI Consulting & Workshops for Swiss SMEs",
-            slogan: "So your team loves AI instead of fearing it – practical and without jargon",
-            subtitle: "Practical AI workshops and automation for Swiss SMEs. With measurable results. From someone who knows your daily business.",
-            cta_primary: "Book free 30min consultation",
-            cta_secondary: "View success stories",
-            trust: "years of experience · people trained · Swiss SMEs trust us"
+            overline: "AI FOR RETAIL & E-COMMERCE",
+            title: "AI for sales and online retail in Switzerland",
+            slogan: "From someone who does both: 20 years in consumer goods sales and an AI-automated online shop of my own.",
+            subtitle: "Compact workshops and automations for importers, brand distributors and online retailers. Fixed prices, immediately usable.",
+            cta_primary: "Request free potential check",
+            cta_secondary: "See a real example"
         },
         why: {
             title: "Why AI is important for Swiss SMEs now",

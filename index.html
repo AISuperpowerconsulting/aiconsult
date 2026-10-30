@@ -61,10 +61,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style-improved.css">
+    <link rel="stylesheet" href="css/site.css">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -252,341 +252,277 @@
 </head>
 
 <body>
-
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="img/logo-aiconsult-white.webp" alt="AIConsult.ch Logo">
-            </a>
-            <ul class="nav-links">
+    <nav class="site-nav" aria-label="Hauptnavigation">
+        <div class="wrap">
+            <a href="/"><img src="img/logo-aiconsult-white-tight.webp" alt="AIConsult.ch" width="600" height="68"></a>
+            <ul>
                 <li><a href="#offers">Angebote</a></li>
                 <li><a href="#about">Über mich</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="btn btn-sm">Kontakt</a></li>
+                <li><a href="#faq">Fragen</a></li>
+                <li><a href="#contact" class="btn">Kontakt</a></li>
             </ul>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
-    <!-- Sticky CTA Button -->
-    <a href="#contact" id="sticky-cta" class="sticky-cta" aria-label="Kostenlosen Potenzialcheck anfragen">
-        <span class="sticky-cta-text">Potenzialcheck</span>
-        <span class="sticky-cta-icon">→</span>
-    </a>
-
-    <!-- Hero Section -->
-    <header id="hero">
-        <div class="hero-bg">
-            <img src="img/ai-mountain-waves-wide.webp"
-                alt="Digitale Datenwellen vor Schweizer Bergpanorama als Symbol für KI Beratung">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <span class="overline">KI FÜR HANDEL & E-COMMERCE</span>
-                <h1>KI für Vertrieb und Onlinehandel in der Schweiz</h1>
-                <p class="hero-slogan">Von einem Vertriebsprofi, der KI selbst im Alltag einsetzt.</p>
-                <p class="subline">Kompakte Workshops und Automatisierungen für Importeure, Markenvertriebe und Online-Händler. Fixpreise, sofort im Alltag nutzbar.</p>
-                <div class="cta-group">
-                    <a href="#contact" class="btn btn-primary">Kostenlosen Potenzialcheck anfragen</a>
-                    <a href="#offers" class="btn btn-secondary">Angebote ansehen</a>
-                </div>
-                <div class="trust-line">
-                    <p>Ex Head of Sales Samsung Schweiz · CAS AI Management HWZ · Schlieren ZH</p>
+    <header class="hero" id="hero">
+        <div class="wrap">
+            <div class="hero-copy">
+                <h1>KI für Vertrieb und Onlinehandel.</h1>
+                <p class="lead">Kompakte Workshops und Automatisierungen für Importeure, Markenvertriebe und
+                    Online-Händler in der Schweiz. Zum Fixpreis, mit Ihren eigenen Daten.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn">Potenzialcheck anfragen</a>
+                    <a href="#offers" class="btn btn-line">Preise ansehen</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="img/adrian-portrait.webp" alt="Adrian Althaus, KI Berater für Handel und E-Commerce">
+            <div class="hero-photo">
+                <img src="img/adrian-portrait.webp" alt="Adrian Althaus" width="682" height="1024">
             </div>
+            <a href="#contact" class="price-tag" data-topic="other">
+                <span>Potenzialcheck<br>30 Minuten</span>
+                <strong>0.–</strong>
+            </a>
         </div>
     </header>
 
-    <main>
-        <!-- Why AI Section -->
-        <section id="why-ai">
-            <div class="container">
-                <h2>Warum KI im Handel jetzt den Unterschied macht</h2>
-                <p class="intro-text">Drei von vier Schweizer KMU nutzen oder testen KI bereits, aber nur rund ein Drittel
-                    hat sie wirklich in die Abläufe eingebaut (AXA KMU-Studie 2026). Im Handel liegt das grösste
-                    Potenzial dort, wo täglich Daten, Produkte und Kundenanfragen bewegt werden.</p>
+    <div class="credentials">
+        <div class="wrap">
+            Adrian Althaus, früher <strong>Head of Sales bei Samsung Schweiz</strong>, heute KI-Berater mit
+            <strong>CAS AI Management der HWZ</strong>.
+        </div>
+    </div>
 
-                <div class="grid-3">
-                    <div class="card benefit-card">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
-                        </div>
-                        <h3>Weniger Routine</h3>
-                        <p>Produktdaten, Standardmails und Bestellungen laufen teilweise automatisch. Ihr Team hat mehr
-                            Zeit für Kunden und Händler.</p>
-                        <div class="benefit-stat">Mehr Zeit für <strong>Kunden & Händler</strong></div>
+    <main>
+        <section class="section" id="why-ai" aria-labelledby="why-title">
+            <div class="wrap">
+                <h2 id="why-title">Wo KI im Handel Zeit spart</h2>
+                <p class="lead">Drei von vier Schweizer KMU nutzen oder testen KI, aber nur rund ein Drittel hat sie
+                    wirklich in die Abläufe eingebaut. Im Handel liegt das Potenzial dort, wo jede Woche dieselbe
+                    Arbeit anfällt.</p>
+                <div class="why-grid">
+                    <div>
+                        <h3>Produktdaten und Routinemails</h3>
+                        <p>Artikeltexte, Datenfelder, Standardantworten und Bestellungen laufen teilweise automatisch.
+                            Ihr Team prüft und gibt frei.</p>
                     </div>
-                    <div class="card benefit-card">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M3 3v18h18"/>
-                                <path d="M7 16l4-8 4 4 4-12"/>
-                            </svg>
-                        </div>
-                        <h3>Schnellere Auswertungen</h3>
-                        <p>Sell-out-Daten, Forecasts und Vorbereitung von Jahresgesprächen in einem Bruchteil der Zeit.
-                            Mit Werkzeugen, die Ihr Team selbst bedienen kann.</p>
-                        <div class="benefit-stat">Reporting <strong>ohne Copy-Paste</strong></div>
+                    <div>
+                        <h3>Sell-out und Jahresgespräche</h3>
+                        <p>Auswertungen, Forecasts und die Vorbereitung von Gesprächen mit dem Einkauf in einem
+                            Bruchteil der Zeit, mit Werkzeugen, die Ihr Team selbst bedient.</p>
                     </div>
-                    <div class="card benefit-card">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
-                        </div>
-                        <h3>Klare Regeln</h3>
-                        <p>Welche Daten dürfen in welches Tool? Eine kurze, verständliche KI-Richtlinie schafft
-                            Sicherheit für Geschäftsleitung und Mitarbeitende.</p>
-                        <div class="benefit-stat">Orientiert am <strong>Schweizer DSG</strong></div>
+                    <div>
+                        <h3>Klare Regeln im Team</h3>
+                        <p>Welche Daten dürfen in welches Tool? Eine kurze KI-Richtlinie, orientiert am Schweizer DSG,
+                            schafft Sicherheit für Geschäftsleitung und Mitarbeitende.</p>
                     </div>
                 </div>
+                <p class="source">Quelle: AXA KMU-Arbeitsmarktstudie 2026</p>
             </div>
         </section>
 
-        <!-- Offers Section -->
-        <section id="offers">
-            <div class="container">
-                <h2>Konkrete Angebote zum Fixpreis</h2>
-                <p class="intro-text">Kompakt, klar abgegrenzt, sofort nutzbar. Vor Ort in der Deutschschweiz oder remote.</p>
+        <section class="section offers on-black" id="offers" aria-labelledby="offer-title">
+            <div class="wrap">
+                <h2 id="offer-title">Fixpreise. Klar angeschrieben.</h2>
+                <p class="lead">Von einem halben bis drei Tagen. Vor Ort in der Deutschschweiz oder remote.</p>
 
-                <div class="grid-3">
-                    <div class="card pricing-card">
+                <div class="tags">
+                    <article class="tag">
+                        <p class="tag-kind">Für Teams, die KI sicher einführen wollen</p>
                         <h3>KI-Startpaket</h3>
-                        <p class="desc">Für Teams, die KI sicher und gezielt einführen wollen.</p>
                         <ul>
                             <li>KI-Nutzungsrichtlinie, angepasst an Ihr Unternehmen</li>
-                            <li>3-Stunden-Workshop mit Ihren eigenen Anwendungsfällen</li>
+                            <li>Workshop mit Ihren eigenen Anwendungsfällen</li>
                             <li>Teilnahmebestätigung als Schulungsnachweis</li>
                             <li>30 Tage Fragen per E-Mail</li>
                         </ul>
-                        <div class="price">CHF 2'400 <span class="small">pauschal, bis 12 Teilnehmende</span></div>
-                        <a href="#contact" class="btn btn-primary full-width" data-topic="startpaket">Startpaket anfragen</a>
-                    </div>
-                    <div class="card pricing-card highlight">
-                        <h3>Workshop: KI im Vertrieb & KAM</h3>
-                        <p class="desc">Für Vertriebs- und Key-Account-Teams in Handel und Markenvertrieb.</p>
+                        <div class="tag-price">
+                            <span class="amount"><small>CHF</small>2'400.–</span>
+                            <span class="unit">pauschal, 3 Stunden, bis 12 Personen</span>
+                            <a href="#contact" class="btn" data-topic="startpaket">Startpaket anfragen</a>
+                        </div>
+                    </article>
+
+                    <article class="tag">
+                        <p class="tag-kind">Schwerpunkt für Vertriebs- und KAM-Teams</p>
+                        <h3>Workshop KI im Vertrieb und Key Account Management</h3>
                         <ul>
                             <li>Sell-out-Reporting und Marktanalyse mit KI</li>
                             <li>Jahresgespräche und Listungsargumente vorbereiten</li>
                             <li>Offerten, Nachfassen und Kundenkommunikation</li>
                             <li>Arbeit mit Ihren eigenen Daten und Vorlagen</li>
                         </ul>
-                        <div class="price">CHF 2'200 <span class="small">pauschal, ½ Tag, bis 12 Teilnehmende</span></div>
-                        <a href="#contact" class="btn btn-primary full-width" data-topic="vertrieb">Workshop anfragen</a>
-                    </div>
-                    <div class="card pricing-card">
+                        <div class="tag-price">
+                            <span class="amount"><small>CHF</small>2'200.–</span>
+                            <span class="unit">pauschal, ½ Tag, bis 12 Personen</span>
+                            <a href="#contact" class="btn" data-topic="vertrieb">Workshop anfragen</a>
+                        </div>
+                    </article>
+
+                    <article class="tag">
+                        <p class="tag-kind">Für Online-Händler mit Shopify und ähnlichen Systemen</p>
                         <h3>E-Commerce-Automatisierung</h3>
-                        <p class="desc">Für Online-Händler und Shops mit Shopify oder ähnlichen Systemen.</p>
                         <ul>
                             <li>Analyse Ihrer Shop-Abläufe</li>
-                            <li>1–2 Automatisierungen, z. B. Produktdaten, Lager, Kundenmails</li>
-                            <li>Umsetzung mit Shopify, Make oder n8n</li>
-                            <li>Übergabe mit Anleitung</li>
+                            <li>1–2 Automatisierungen, etwa Produktdaten, Lager oder Kundenmails</li>
+                            <li>Umsetzung mit Shopify, Make oder n8n, Übergabe mit Anleitung</li>
                         </ul>
-                        <div class="price">ab CHF 3'800 <span class="small">Fixpreis nach Analyse</span></div>
-                        <a href="#contact" class="btn btn-primary full-width" data-topic="ecommerce">Automatisierung anfragen</a>
-                    </div>
+                        <div class="tag-price">
+                            <span class="amount"><small>ab CHF</small>3'800.–</span>
+                            <span class="unit">Fixpreis nach Analyse, 2–3 Tage</span>
+                            <a href="#contact" class="btn" data-topic="ecommerce">Automatisierung anfragen</a>
+                        </div>
+                    </article>
                 </div>
-                <p class="intro-text" style="margin-top: 2rem;">Sparring für Geschäftsleitung und Vertriebsleitung: CHF 220 pro Stunde.
-                    Die ersten 3 Pilotkunden erhalten 30 % Rabatt gegen eine Referenz.</p>
+
+                <p class="offers-note">Sparring für Geschäftsleitung und Vertriebsleitung: CHF 220 pro Stunde.
+                    <strong>Pilotkunden:</strong> Die ersten drei Unternehmen erhalten 30 % Rabatt gegen eine Referenz.</p>
             </div>
         </section>
 
-
-        <!-- About Section -->
-        <section id="about">
-            <div class="container about-container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Über mich: Adrian Althaus</h2>
-                        <p class="about-story">Ich habe über 20 Jahre im Schweizer Konsumgüter-Vertrieb gearbeitet,
-                            unter anderem als <strong>Head of Sales und Head of Product Management bei Samsung Schweiz</strong>
-                            und im Category Management der Migros. Ich kenne Jahresgespräche mit Einkäufern,
-                            Sell-out-Zahlen und Forecasts aus erster Hand.</p>
-
-                        <p>2026 habe ich das <strong>CAS AI Management an der HWZ</strong> abgeschlossen, mit einem
-                            Multi-Agent-System als Abschlussarbeit. Und ich betreibe mit Alcfree.ch einen eigenen Onlineshop,
-                            den ich weitgehend mit KI automatisiert habe. In meinen Workshops zeige ich deshalb nichts,
-                            was ich nicht selbst im Einsatz habe.</p>
-
-                        <div class="about-credentials">
-                            <div class="credential-item">
-                                <span class="credential-icon">◘</span>
-                                <div>
-                                    <strong>Erfahrung</strong>
-                                    <p>20+ Jahre Vertrieb, Key Account und Produktmanagement im Konsumgüterhandel (Samsung, Migros)</p>
-                                </div>
-                            </div>
-                            <div class="credential-item">
-                                <span class="credential-icon">◆</span>
-                                <div>
-                                    <strong>Ausbildung</strong>
-                                    <p>CAS AI Management (HWZ, 2026) · Marketing & Sales Manager NDS · Eidg. dipl. Marketingfachmann</p>
-                                </div>
-                            </div>
-                            <div class="credential-item">
-                                <span class="credential-icon">◎</span>
-                                <div>
-                                    <strong>Standort</strong>
-                                    <p>Schlieren bei Zürich. Workshops vor Ort in der Deutschschweiz oder remote</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image-section">
-                        <img src="img/adrian-about.webp" loading="lazy" width="640" height="960" alt="Adrian Althaus" class="about-portrait">
-                        <div class="about-quote">
-                            <p>"KI lohnt sich dort, wo jede Woche dieselbe Arbeit anfällt. Im Handel ist das fast überall."</p>
-                            <strong>— Adrian Althaus</strong>
-                        </div>
-                    </div>
+        <section class="section about" id="about" aria-labelledby="about-title">
+            <div class="wrap">
+                <div class="about-photo">
+                    <img src="img/adrian-about.webp" alt="Adrian Althaus" width="640" height="960" loading="lazy">
+                </div>
+                <div>
+                    <p class="quote">KI lohnt sich dort, wo jede Woche dieselbe Arbeit anfällt. Im Handel ist das fast
+                        überall.</p>
+                    <h2 id="about-title" class="visually-hidden">Über mich</h2>
+                    <p>Ich habe über 20 Jahre im Schweizer Konsumgüter-Vertrieb gearbeitet, unter anderem als Head of
+                        Sales und Head of Product Management bei Samsung Schweiz und im Category Management der Migros.
+                        Jahresgespräche mit Einkäufern, Sell-out-Zahlen und Forecasts kenne ich aus erster Hand.</p>
+                    <p>2026 habe ich das CAS AI Management an der HWZ abgeschlossen. Daneben führe ich einen eigenen
+                        Onlineshop, den ich weitgehend mit KI automatisiert habe. Ich zeige in Workshops nur, was ich
+                        selbst im Einsatz habe.</p>
+                    <dl class="facts">
+                        <dt>Erfahrung</dt>
+                        <dd>Vertrieb, Key Account und Produktmanagement im Konsumgüterhandel</dd>
+                        <dt>Ausbildung</dt>
+                        <dd>CAS AI Management (HWZ), Marketing &amp; Sales Manager NDS, eidg. dipl. Marketingfachmann</dd>
+                        <dt>Standort</dt>
+                        <dd>Schlieren bei Zürich, Workshops in der Deutschschweiz oder remote</dd>
+                    </dl>
                 </div>
             </div>
         </section>
 
-        <!-- Process Section -->
-        <section id="process">
-            <div class="container">
-                <h2>So starten wir</h2>
-                <div class="grid-3">
-                    <div class="card process-card">
-                        <div class="step-number">1</div>
-                        <h3>Kostenloser Potenzialcheck</h3>
-                        <p>Wir schauen gemeinsam auf Ihre Abläufe im Vertrieb oder Shop und finden 2–3 konkrete Ansatzpunkte.</p>
-                        <div class="process-duration">◷ 30 Minuten</div>
-                    </div>
-                    <div class="card process-card">
-                        <div class="step-number">2</div>
-                        <h3>Workshop oder Automatisierung</h3>
-                        <p>Sie erhalten eine Offerte zum Fixpreis. Danach Workshop mit Ihrem Team oder Umsetzung der Automatisierung.</p>
-                        <div class="process-duration">◫ ½ bis 3 Tage</div>
-                    </div>
-                    <div class="card process-card">
-                        <div class="step-number">3</div>
-                        <h3>Selbstständig weiterarbeiten</h3>
+        <section class="section process" id="process" aria-labelledby="steps-title">
+            <div class="wrap">
+                <h2 id="steps-title">So starten wir</h2>
+                <ol class="steps">
+                    <li>
+                        <h3>Potenzialcheck</h3>
+                        <p>30 Minuten, kostenlos. Wir schauen auf Ihre Abläufe im Vertrieb oder Shop und finden zwei
+                            bis drei konkrete Ansatzpunkte.</p>
+                    </li>
+                    <li>
+                        <h3>Offerte und Umsetzung</h3>
+                        <p>Sie erhalten eine Offerte zum Fixpreis. Danach Workshop mit Ihrem Team oder Umsetzung der
+                            Automatisierung.</p>
+                    </li>
+                    <li>
+                        <h3>Selbstständig weiter</h3>
                         <p>Ihr Team arbeitet selbstständig weiter. Bei Bedarf begleite ich Sie punktuell.</p>
-                        <div class="process-duration">△ nach Bedarf</div>
-                    </div>
-                </div>
+                    </li>
+                </ol>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section id="faq">
-            <div class="container">
-                <h2>Häufige Fragen</h2>
-                <div class="faq-grid">
-                    <div class="card faq-card">
-                        <h3>Für wen eignet sich AIConsult.ch?</h3>
-                        <p>Für Importeure, Markenvertriebe, Händler und Online-Shops in der Deutschschweiz, typischerweise
-                            mit 3 bis 200 Mitarbeitenden, die KI im Vertrieb oder im Shop gezielt einsetzen wollen.</p>
-                    </div>
-                    <div class="card faq-card">
-                        <h3>Braucht mein Team technische Vorkenntnisse?</h3>
+        <section class="section" id="faq" aria-labelledby="faq-title">
+            <div class="wrap">
+                <h2 id="faq-title">Häufige Fragen</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Für wen eignet sich AIConsult.ch?</summary>
+                        <p>Für Importeure, Markenvertriebe, Händler und Online-Shops in der Deutschschweiz,
+                            typischerweise mit 3 bis 200 Mitarbeitenden, die KI im Vertrieb oder im Shop gezielt
+                            einsetzen wollen.</p>
+                    </details>
+                    <details>
+                        <summary>Braucht mein Team technische Vorkenntnisse?</summary>
                         <p>Nein. Wir arbeiten mit Ihren eigenen Aufgaben und Daten, Schritt für Schritt. Wer Excel und
                             E-Mail beherrscht, kann mitmachen.</p>
-                    </div>
-                    <div class="card faq-card">
-                        <h3>Mit welchen Tools arbeiten wir?</h3>
+                    </details>
+                    <details>
+                        <summary>Mit welchen Tools arbeiten wir?</summary>
                         <p>Vor allem ChatGPT, Claude und Microsoft Copilot, für Automatisierungen Make, n8n oder Zapier,
                             dazu Ihre bestehenden Systeme wie Shopify, Excel oder CRM.</p>
-                    </div>
-                    <div class="card faq-card">
-                        <h3>Machen Sie auch grosse IT-Projekte?</h3>
-                        <p>Nein, bewusst nicht. Ich biete kompakte Formate von einem halben bis drei Tagen an. Für grössere
-                            Integrationsprojekte empfehle ich Ihnen gerne passende Partner.</p>
-                    </div>
-                    <div class="card faq-card">
-                        <h3>Wie gehen wir mit Datenschutz um?</h3>
-                        <p>Wir klären, welche Daten in welches Tool dürfen, und halten das in einer kurzen Richtlinie fest,
-                            orientiert am Schweizer Datenschutzgesetz (DSG). Eine Rechtsberatung ersetzt das nicht.</p>
-                    </div>
-                    <div class="card faq-card">
-                        <h3>Was kostet eine Zusammenarbeit?</h3>
-                        <p>KI-Startpaket CHF 2'400, Workshop KI im Vertrieb CHF 2'200, E-Commerce-Automatisierung ab
-                            CHF 3'800, Sparring CHF 220/h. Der Potenzialcheck ist kostenlos.</p>
-                    </div>
+                    </details>
+                    <details>
+                        <summary>Machen Sie auch grosse IT-Projekte?</summary>
+                        <p>Nein, bewusst nicht. Ich biete kompakte Formate von einem halben bis drei Tagen an. Für
+                            grössere Integrationsprojekte empfehle ich Ihnen gerne passende Partner.</p>
+                    </details>
+                    <details>
+                        <summary>Wie gehen wir mit Datenschutz um?</summary>
+                        <p>Wir klären, welche Daten in welches Tool dürfen, und halten das in einer kurzen Richtlinie
+                            fest, orientiert am Schweizer Datenschutzgesetz (DSG). Eine Rechtsberatung ersetzt das
+                            nicht.</p>
+                    </details>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer / Contact -->
-    <footer id="contact">
-        <div class="container footer-container">
-            <div class="contact-info">
-                <h2>Bereit für den nächsten Schritt mit KI?</h2>
-                <p>Fragen Sie einen kostenlosen 30-Minuten-Potenzialcheck an.</p>
-                <div class="contact-details">
-                    <a href="mailto:adrian@aiconsult.ch" class="contact-link">adrian@aiconsult.ch</a>
-                    <a href="tel:+41797401021" class="contact-link">+41 79 740 10 21</a>
-                    <p class="contact-address">Brandstrasse 25, 8952 Schlieren</p>
-                </div>
-                <p class="note">✓ Antwort innerhalb von 2 Arbeitstagen · ✓ Unverbindlich · ✓ Kostenlos</p>
-
-                <div class="trust-badges">
-                    <div class="trust-badge">✓ Schlieren ZH</div>
-                    <div class="trust-badge">✓ Fixpreise</div>
-                    <div class="trust-badge">✓ DSG-orientiert</div>
-                </div>
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="wrap">
+            <div>
+                <h2 id="contact-title">Reden wir über Ihren Vertrieb.</h2>
+                <p class="lead" style="color: var(--black);">Im kostenlosen Potenzialcheck klären wir in 30 Minuten,
+                    wo KI bei Ihnen am meisten bringt. Antwort innerhalb von zwei Arbeitstagen.</p>
+                <p class="contact-lines">
+                    <a href="mailto:adrian@aiconsult.ch">adrian@aiconsult.ch</a><br>
+                    <a href="tel:+41797401021">+41 79 740 10 21</a><br>
+                    Brandstrasse 25, 8952 Schlieren
+                </p>
             </div>
-            <div class="contact-form-wrapper card">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Potenzialcheck anfragen</h3>
-                <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">In 30 Minuten klären wir, wo KI in Ihrem Vertrieb oder Shop am meisten bringt. Kostenlos und unverbindlich.</p>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Ihr Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-Mail Adresse *</label>
-                        <input type="email" id="email" name="email" required placeholder="ihre@email.ch">
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Firma</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="topic">Worum geht es hauptsächlich?</label>
-                        <select id="topic" name="topic">
-                            <option value="other">Potenzialcheck / Kennenlernen</option>
-                            <option value="startpaket">KI-Startpaket</option>
-                            <option value="vertrieb">Workshop KI im Vertrieb & KAM</option>
-                            <option value="ecommerce">E-Commerce-Automatisierung</option>
-                            <option value="beratung">Sparring / Beratung</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Kurze Nachricht (optional)</label>
-                        <textarea id="message" name="message" rows="3"
-                            placeholder="Z.B. Branche, Teamgrösse, konkrete Herausforderung..."></textarea>
-                    </div>
-                    <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-                    <button type="submit" class="btn btn-primary full-width">Potenzialcheck anfragen</button>
-                    <p class="form-note">Ihre Angaben verwende ich nur zur Beantwortung der Anfrage. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
-                </form>
-            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div class="field">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+                <div class="field">
+                    <label for="company">Firma (optional)</label>
+                    <input type="text" id="company" name="company" autocomplete="organization">
+                </div>
+                <div class="field">
+                    <label for="topic">Thema</label>
+                    <select id="topic" name="topic">
+                        <option value="other">Potenzialcheck / Kennenlernen</option>
+                        <option value="startpaket">KI-Startpaket</option>
+                        <option value="vertrieb">Workshop KI im Vertrieb und KAM</option>
+                        <option value="ecommerce">E-Commerce-Automatisierung</option>
+                        <option value="beratung">Sparring / Beratung</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="message">Nachricht (optional)</label>
+                    <textarea id="message" name="message" rows="3"></textarea>
+                </div>
+                <input type="checkbox" name="botcheck" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <button type="submit" class="btn">Potenzialcheck anfragen</button>
+                <p class="form-note">Ihre Angaben verwende ich nur zur Beantwortung der Anfrage. Mehr dazu in der
+                    <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            </form>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 AIConsult.ch · <a href="blog">Blog</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    </section>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>&copy; 2026 AIConsult.ch, Althaus Online</span>
+            <ul>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
         </div>
     </footer>
 
-
     <script src="js/contact-forms.js"></script>
-    <script src="js/main-improved.js"></script>
     <script src="js/tracking.js"></script>
 </body>
 

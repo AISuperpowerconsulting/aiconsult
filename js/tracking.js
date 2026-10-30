@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Hero CTAs
-    const heroPrimaryCta = document.querySelector('.hero-content .btn-primary');
+    const heroPrimaryCta = document.querySelector('.hero-actions .btn:not(.btn-line)');
     if (heroPrimaryCta) {
         heroPrimaryCta.addEventListener('click', () => {
             trackEvent('cta_click', {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const heroSecondaryCta = document.querySelector('.hero-content .btn-secondary');
+    const heroSecondaryCta = document.querySelector('.hero-actions .btn-line');
     if (heroSecondaryCta) {
         heroSecondaryCta.addEventListener('click', () => {
             trackEvent('cta_click', {
@@ -58,12 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Pricing Card Buttons (track which offer is clicked)
-    const pricingButtons = document.querySelectorAll('.pricing-card .btn');
+    const pricingButtons = document.querySelectorAll('.tag .btn');
     pricingButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
-            const card = button.closest('.pricing-card');
+            const card = button.closest('.tag');
             const offerName = card.querySelector('h3')?.textContent || `Offer ${index + 1}`;
-            const price = card.querySelector('.price')?.textContent || 'unknown';
+            const price = card.querySelector('.amount')?.textContent || 'unknown';
 
             trackEvent('view_item', {
                 'item_name': offerName,
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================
 
     // Track navigation clicks
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.site-nav a').forEach(link => {
         link.addEventListener('click', () => {
             trackEvent('navigation_click', {
                 'link_text': link.textContent.trim(),

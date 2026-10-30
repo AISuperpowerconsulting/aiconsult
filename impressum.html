@@ -9,24 +9,23 @@
     <link rel="icon" type="image/png" href="img/logo-aiconsult-white.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style-improved.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 
 <body>
-    <nav id="navbar" class="scrolled">
-        <div class="container nav-container">
-            <a href="/" class="logo">
-                <img src="img/logo-aiconsult-white.webp" alt="AIConsult.ch Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="/">Startseite</a></li>
-                <li><a href="/#contact" class="btn btn-sm">Kontakt</a></li>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+        <div class="wrap">
+            <a href="/"><img src="img/logo-aiconsult-white-tight.webp" alt="AIConsult.ch" width="600" height="68"></a>
+            <ul>
+                <li><a href="/#offers">Angebote</a></li>
+                <li><a href="/#about">Über mich</a></li>
+                <li><a href="/#contact" class="btn">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container legal-page">
+    <main class="wrap legal-page">
         <h1>Impressum</h1>
 
         <h2>Anbieter</h2>
@@ -54,12 +53,17 @@
         <p>Texte, Bilder und weitere Inhalte dieser Website gehören AIConsult.ch oder den genannten Rechteinhabern.
             Eine Verwendung ausserhalb der privaten Nutzung bedarf der vorgängigen Zustimmung.</p>
 
-        <p style="margin-top: 2rem;"><a href="datenschutz.html">Zur Datenschutzerklärung</a></p>
+        <p><a href="datenschutz.html">Zur Datenschutzerklärung</a></p>
     </main>
 
-    <footer>
-        <div class="footer-bottom">
-            <p>&copy; 2026 AIConsult.ch · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>&copy; 2026 AIConsult.ch, Althaus Online</span>
+            <ul>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
         </div>
     </footer>
 </body>

@@ -130,8 +130,12 @@ p {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: var(--signal);
-    border-bottom: 2px solid var(--black);
+    background: var(--black);
+    color: var(--white);
+}
+
+.site-nav :focus-visible {
+    outline-color: var(--signal);
 }
 
 .site-nav .wrap {
@@ -166,6 +170,14 @@ p {
 
 .site-nav .btn {
     padding: 0.55rem 1rem;
+    background: var(--signal);
+    border-color: var(--signal);
+    color: var(--black);
+}
+
+.site-nav .btn:hover {
+    background: var(--white);
+    border-color: var(--white);
 }
 
 /* Hero: the promo sign */

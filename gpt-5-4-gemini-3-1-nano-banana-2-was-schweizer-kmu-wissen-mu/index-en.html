@@ -13,10 +13,11 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../css/style-improved.css">
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="../css/blog.css">
 
     <!-- Article Schema Markup -->
     <script type="application/ld+json">
@@ -47,26 +48,18 @@
 
 <body>
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container nav-container">
-            <a href="../" class="logo">
-                <img src="../img/logo-aiconsult-white.png?v=3" alt="AIConsult.ch Logo">
-            </a>
-            <ul class="nav-links">
-                <li><a href="../#why-ai">Why AI</a></li>
-                <li><a href="../#services">Solutions</a></li>
+    <nav class="site-nav" aria-label="Navigation">
+        <div class="wrap">
+            <a href="../"><img src="../img/logo-aiconsult-white-tight.webp" alt="AIConsult.ch" width="600" height="68"></a>
+            <ul>
                 <li><a href="../#offers">Offers</a></li>
-                <li><a href="../blog">Blog</a></li>
-                <li><a href="../#contact" class="btn btn-sm">Contact</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../blog-en">Blog</a></li>
+                <li><a href="../#contact" class="btn">Contact</a></li>
             </ul>
             <div class="language-switcher">
                 <button class="lang-btn active" onclick="window.location.href='index-en.html'">EN</button>
                 <button class="lang-btn" onclick="window.location.href='index.html'">DE</button>
-            </div>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
         </div>
     </nav>
@@ -137,16 +130,15 @@
     </article>
 
     <!-- Footer -->
-    <footer style="background: var(--bg-soft); padding: 3rem 0 2rem; margin-top: 4rem; text-align: center;">
-        <div class="container">
-            <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                <a href="../blog" style="color: var(--primary); text-decoration: none;">← Back to Blog</a> |
-                <a href="../" style="color: var(--primary); text-decoration: none;">Main Page</a>
-            </p>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 AIConsult.ch. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <span>&copy; 2026 AIConsult.ch, Althaus Online</span>
+            <ul>
+                <li><a href="../blog">Blog</a></li>
+                <li><a href="../impressum.html">Impressum</a></li>
+                <li><a href="../datenschutz.html">Datenschutz</a></li>
+            </ul>
         </div>
     </footer>
-
-    <script src="../js/main-improved.js"></script>
 </body>
 </html>

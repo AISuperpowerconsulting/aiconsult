@@ -1,0 +1,113 @@
+/* AIConsult.ch – Blog im Design «Signal».
+   Ergänzt site.css. Die Blogseiten (auch die der Pipeline) nutzen Inline-Styles mit den
+   Variablen des alten dunklen Designs; diese werden hier auf das helle Design abgebildet. */
+
+:root {
+    --bg-main: #FFFFFF;
+    --bg-soft: #EEF0F0;
+    --glass-bg: #FFFFFF;
+    --text-primary: #000000;
+    --text-light: #000000;
+    --text-body: #2A3035;
+    --text-muted: #4A5157;
+    --primary: #0B6B5C;
+    --secondary: #0B6B5C;
+    --accent-warm: #000000;
+    --border-subtle: #C9CDCD;
+}
+
+.container {
+    max-width: var(--wrap);
+    margin: 0 auto;
+    padding-inline: var(--gutter);
+}
+
+.overline {
+    font-weight: 700;
+}
+
+/* Cards: overview tiles and article call-to-action */
+.card {
+    display: block;
+    background: var(--white);
+    color: var(--black);
+    border: 2px solid var(--black);
+    border-radius: 6px;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+a.card {
+    transition: box-shadow 0.15s ease;
+}
+
+a.card:hover {
+    box-shadow: 6px 6px 0 var(--black);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.btn-primary {
+    background: var(--signal);
+    color: var(--black);
+}
+
+.btn-primary:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* Article typography: section titles inside the text stay readable, not poster-sized */
+article h2 {
+    font-stretch: 75%;
+    font-weight: 800;
+    font-size: clamp(1.7rem, 3vw, 2.1rem);
+    line-height: 1.1;
+}
+
+article h3 {
+    font-size: 1.35rem;
+}
+
+article p,
+article li {
+    max-width: none;
+}
+
+article a:not(.btn) {
+    color: var(--primary);
+}
+
+.article-header h1 {
+    line-height: 1;
+}
+
+/* Language switch on blog pages */
+.language-switcher {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.lang-btn {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid #5A6066;
+    font: 600 0.85rem/1 var(--font);
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+}
+
+.lang-btn.active {
+    background: var(--signal);
+    color: var(--black);
+    border-color: var(--signal);
+}
+
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}

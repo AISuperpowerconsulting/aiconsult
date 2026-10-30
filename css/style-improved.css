@@ -891,8 +891,21 @@ footer {
         padding-block: 4rem;
     }
 
+    #hero {
+        max-height: none;
+    }
+
+    .hero-content {
+        padding-top: 5.5rem;
+    }
+
     .hero-image {
-        display: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        max-width: 240px;
     }
 
     .cta-group {

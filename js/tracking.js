@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================================
 
     // Track when important sections come into view
-    const sectionsToTrack = ['#why-ai', '#services', '#offers', '#proof', '#about', '#faq'];
+    const sectionsToTrack = ['#why-ai', '#offers', '#about', '#process', '#faq'];
 
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {

@@ -22,14 +22,15 @@ NAV_LABELS = {
 def nav_html(prefix, lang, switcher):
     offers, about, blog, contact = NAV_LABELS[lang]
     blog_href = f"{prefix}blog-en" if lang == "en" else f"{prefix}blog"
+    home = f"{prefix}en" if lang == "en" else prefix
     return f"""    <nav class="site-nav" aria-label="Navigation">
         <div class="wrap">
-            <a href="{prefix}"><img src="{prefix}img/logo-aiconsult-white-tight.webp" alt="AIConsult.ch" width="600" height="68"></a>
+            <a href="{home}"><img src="{prefix}img/logo-aiconsult-white-tight.webp" alt="AIConsult.ch" width="600" height="68"></a>
             <ul>
-                <li><a href="{prefix}#offers">{offers}</a></li>
-                <li><a href="{prefix}#about">{about}</a></li>
+                <li><a href="{home}#offers">{offers}</a></li>
+                <li><a href="{home}#about">{about}</a></li>
                 <li><a href="{blog_href}">{blog}</a></li>
-                <li><a href="{prefix}#contact" class="btn">{contact}</a></li>
+                <li><a href="{home}#contact" class="btn">{contact}</a></li>
             </ul>
 {switcher}        </div>
     </nav>
@@ -75,6 +76,14 @@ def restyle(path: Path) -> bool:
     html = re.sub(r'    <nav id="navbar">.*?</nav>\n', lambda m: nav_html(prefix, lang, switcher), html, count=1, flags=re.S)
     html = re.sub(r'    <footer[^>]*>.*?</footer>\n', lambda m: footer_html(prefix), html, count=1, flags=re.S)
     html = re.sub(r'\s*<script src="(\.\./)*\.?/?js/main-improved\.js"></script>', "", html)
+    html = re.sub(
+        r'<link rel="icon" type="image/png" href="[^"]*logo-aiconsult-white\.png[^"]*">',
+        '<link rel="icon" href="/favicon.ico" sizes="any">\n'
+        '    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">\n'
+        '    <link rel="apple-touch-icon" href="/apple-touch-icon.png">',
+        html,
+        count=1,
+    )
 
     path.write_text(html, encoding="utf-8", newline="")
     return True

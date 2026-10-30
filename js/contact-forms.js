@@ -5,6 +5,19 @@
 const WEB3FORMS_ACCESS_KEY = '';
 const CONTACT_EMAIL = 'adrian@aiconsult.ch';
 
+const IS_EN = document.documentElement.lang.startsWith('en');
+const TEXT = IS_EN ? {
+    sending: 'Sending...',
+    sent: 'Thank you! Your enquiry has arrived. I will get back to you within 2 working days.',
+    mailto: `Your email program has opened with your enquiry. If not, please write directly to ${CONTACT_EMAIL}.`,
+    failed: `Sending did not work. Please write directly to ${CONTACT_EMAIL} or call +41 79 740 10 21.`
+} : {
+    sending: 'Wird gesendet...',
+    sent: 'Vielen Dank! Ihre Anfrage ist angekommen. Ich melde mich innerhalb von 2 Arbeitstagen.',
+    mailto: `Ihr E-Mail-Programm wurde mit Ihrer Anfrage geöffnet. Falls nicht, schreiben Sie bitte direkt an ${CONTACT_EMAIL}.`,
+    failed: `Das Senden hat leider nicht geklappt. Bitte schreiben Sie direkt an ${CONTACT_EMAIL} oder rufen Sie an: +41 79 740 10 21.`
+};
+
 // Offer metadata for GA4 lead tracking (value = list price in CHF)
 const LEAD_TOPICS = {
     startpaket: { label: 'KI-Startpaket', value: 2400 },
@@ -33,7 +46,7 @@ function openMailFallback(formData, topic) {
     formData.forEach((value, key) => {
         if (value) lines.push(`${key}: ${value}`);
     });
-    const subject = encodeURIComponent(`Anfrage über aiconsult.ch: ${info.label}`);
+    const subject = encodeURIComponent(`${IS_EN ? 'Enquiry via aiconsult.ch' : 'Anfrage über aiconsult.ch'}: ${info.label}`);
     const body = encodeURIComponent(lines.join('\n'));
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 }
@@ -102,19 +115,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
         submitButton.disabled = true;
-        submitButton.textContent = 'Wird gesendet...';
+        submitButton.textContent = TEXT.sending;
 
         try {
             const outcome = await sendLead(contactForm);
             if (outcome === 'sent') {
                 contactForm.reset();
-                showFormStatus(contactForm, 'Vielen Dank! Ihre Anfrage ist angekommen. Ich melde mich innerhalb von 2 Arbeitstagen.', 'success');
+                showFormStatus(contactForm, TEXT.sent, 'success');
             } else {
-                showFormStatus(contactForm, `Ihr E-Mail-Programm wurde mit Ihrer Anfrage geöffnet. Falls nicht, schreiben Sie bitte direkt an ${CONTACT_EMAIL}.`, 'info');
+                showFormStatus(contactForm, TEXT.mailto, 'info');
             }
         } catch (error) {
             console.error('Form submission error:', error);
-            showFormStatus(contactForm, `Das Senden hat leider nicht geklappt. Bitte schreiben Sie direkt an ${CONTACT_EMAIL} oder rufen Sie an: +41 79 740 10 21.`, 'error');
+            showFormStatus(contactForm, TEXT.failed, 'error');
         } finally {
             submitButton.disabled = false;
             submitButton.textContent = originalText;

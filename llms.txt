@@ -27,7 +27,8 @@
 
 ## Pages
 
-- [Homepage](https://www.aiconsult.ch/): positioning, offers, practical example, about Adrian Althaus, FAQ, contact
+- [Homepage (German)](https://www.aiconsult.ch/): positioning, offers, practical example, about Adrian Althaus, FAQ, contact
+- [Homepage (English)](https://www.aiconsult.ch/en): same content in English
 - [Blog](https://www.aiconsult.ch/blog): articles on AI for Swiss SMEs
 - [KI-Governance für Schweizer KMU](https://www.aiconsult.ch/ki-governance-fuer-schweizer-kmu-dein-weg-zur-compliance-202)
 - [ChatGPT Datenschutz Schweiz](https://www.aiconsult.ch/chatgpt-datenschutz-schweiz)

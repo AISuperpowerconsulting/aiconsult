@@ -2,17 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to English version...</title>
-    <script>
-        // Set language to English and redirect to main page
-        localStorage.setItem('lang', 'en');
-        window.location.href = '/';
-    </script>
+    <meta http-equiv="refresh" content="0; url=/en">
+    <link rel="canonical" href="https://www.aiconsult.ch/en">
+    <meta name="robots" content="noindex">
+    <title>AIConsult.ch</title>
+    <script>try { localStorage.removeItem('lang'); } catch (e) {} window.location.replace('/en');</script>
 </head>
 <body>
-    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">
-        Redirecting to English version...
-    </p>
+    <p><a href="/en">AIConsult.ch in English</a></p>
 </body>
 </html>

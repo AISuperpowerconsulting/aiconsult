@@ -755,7 +755,7 @@ p {
 }
 
 @media (max-width: 640px) {
-    .site-nav ul li:not(:last-child) {
+    .site-nav ul li:not(:last-child):not(:has(.lang-switch)) {
         display: none;
     }
 
@@ -874,4 +874,17 @@ p {
 
 .contact-person strong {
     color: var(--black);
+}
+
+/* Language switch in the navigation */
+.site-nav .lang-switch {
+    border: 1px solid #5A6066;
+    padding: 0.3rem 0.55rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.site-nav .lang-switch:hover {
+    border-color: var(--signal);
+    text-decoration: none;
 }

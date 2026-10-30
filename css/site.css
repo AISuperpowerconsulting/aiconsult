@@ -225,8 +225,13 @@ p {
     align-self: end;
 }
 
+.hero-photo {
+    /* the photo is cropped at the right shoulder: let it bleed to the viewport edge */
+    margin-right: calc((100vw - min(100vw, var(--wrap))) / -2 - var(--gutter));
+}
+
 .hero-photo img {
-    width: min(100%, 460px);
+    width: min(100%, 600px);
     margin-left: auto;
 }
 
@@ -696,8 +701,12 @@ p {
         padding-bottom: 0;
     }
 
+    .hero-photo {
+        margin-right: calc(-1 * var(--gutter));
+    }
+
     .hero-photo img {
-        width: min(80%, 340px);
+        width: min(88%, 420px);
         margin-inline: auto 0;
     }
 

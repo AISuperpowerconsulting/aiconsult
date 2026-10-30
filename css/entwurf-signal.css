@@ -1,7 +1,6 @@
 /* AIConsult.ch – Entwurf «Signal»: Bildsprache der Handels-Signaletik */
 
 :root {
-    --signal: #FFD21F;
     --black: #000000;
     --white: #FFFFFF;
     --grey: #EEF0F0;
@@ -11,6 +10,20 @@
     --font: "Archivo", "Arial Narrow", Arial, sans-serif;
     --wrap: 1180px;
     --gutter: clamp(16px, 4vw, 40px);
+}
+
+/* Farbvarianten zum Vergleich: ?farbe=mint | koralle | himmel */
+:root,
+html[data-farbe="mint"] {
+    --signal: #8EDCCB;
+}
+
+html[data-farbe="koralle"] {
+    --signal: #FF8A73;
+}
+
+html[data-farbe="himmel"] {
+    --signal: #9CC8FF;
 }
 
 *,

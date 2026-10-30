@@ -14,8 +14,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SKIP_DIRS = {"zato-privacy"}
 
 NAV_LABELS = {
-    "de": ("Angebote", "Über mich", "Blog", "Kontakt"),
-    "en": ("Offers", "About", "Blog", "Contact"),
+    "de": ("Angebote", "Ihr Nutzen", "Blog", "Kontakt"),
+    "en": ("Offers", "Benefits", "Blog", "Contact"),
 }
 
 

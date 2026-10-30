@@ -844,3 +844,34 @@ p {
         grid-template-columns: 1fr;
     }
 }
+
+/* Customer benefits */
+.benefits {
+    list-style: none;
+    margin: 0 0 2rem;
+    padding: 0;
+    border-top: 2px solid var(--black);
+}
+
+.benefits li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+    color: var(--muted);
+}
+
+.benefits strong {
+    display: block;
+    color: var(--black);
+    font-stretch: 75%;
+    font-weight: 800;
+    font-size: 1.35rem;
+    margin-bottom: 0.2rem;
+}
+
+.contact-person {
+    color: var(--muted);
+}
+
+.contact-person strong {
+    color: var(--black);
+}

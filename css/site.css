@@ -848,3 +848,31 @@ p {
 .expertise h3:first-child + .keywords li {
     background: var(--signal);
 }
+
+/* Use cases by business area */
+.usecases {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 2.5rem;
+}
+
+.usecases ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.usecases li {
+    margin-bottom: 0.45rem;
+    color: var(--muted);
+}
+
+@media (max-width: 960px) {
+    .usecases {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .usecases {
+        grid-template-columns: 1fr;
+    }
+}

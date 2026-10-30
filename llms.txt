@@ -1,6 +1,6 @@
 # AIConsult.ch
 
-> AIConsult.ch is a Swiss AI consultancy for retail and e-commerce, run by Adrian Althaus in Schlieren near Zurich. It offers compact, fixed-price AI workshops and automations for importers, brand distributors and online retailers in German-speaking Switzerland. Website language: German (formal "Sie").
+> AIConsult.ch is a Swiss AI consultancy (KI-Beratung) run by Adrian Althaus in Schlieren near Zurich. It offers fixed-price AI consulting, AI training for employees (KI-Schulung) and workflow automation for SMEs (KMU) in Zurich and German-speaking Switzerland, with a specialisation in sales, retail and e-commerce. Website language: German (formal "Sie").
 
 ## Who is behind it
 
@@ -11,15 +11,16 @@
 
 ## Offers (fixed prices, CHF)
 
-- KI-Startpaket (CHF 2'400, up to 12 participants): AI usage policy oriented on the Swiss Data Protection Act (DSG), 3-hour workshop with the company's own use cases, attendance confirmation as training record, 30 days of email questions
+- KI-Startpaket: Schulung und Richtlinie (CHF 2'400, up to 12 participants, suitable for any SME team): AI usage policy oriented on the Swiss Data Protection Act (DSG), 3-hour workshop with the company's own use cases, attendance confirmation as training record, 30 days of email questions
 - Workshop "KI im Vertrieb & Key Account Management" (CHF 2'200, half day, up to 12 participants): sell-out reporting and market analysis with AI, preparing annual negotiations with retail buyers, quotes and follow-ups
 - E-Commerce-Automatisierung (from CHF 3'800): analysis plus 1–2 automations for Shopify shops (product data, inventory, customer emails) with Shopify, Make or n8n
 - Sparring for management and sales leadership: CHF 220 per hour
 - Free 30-minute potential check ("Potenzialcheck")
-- Not offered: large IT or integration projects
+- Larger integration projects: together with specialised partners
 
 ## Good fit
 
+- Any SME (3–200 employees) in Zurich and German-speaking Switzerland that wants to introduce AI safely and train its team
 - Importers and brand distributors (e.g. beverages, food, sports, household, beauty) with 3–200 employees
 - Online retailers and Shopify merchants in Switzerland
 - Sales and key account teams that want to use AI with their own data

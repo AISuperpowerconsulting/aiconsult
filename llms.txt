@@ -5,15 +5,15 @@
 ## Who is behind it
 
 - Adrian Althaus, founder and consultant (Althaus Online, sole proprietorship, UID CHE-496.054.967, Brandstrasse 25, 8952 Schlieren, Switzerland)
-- 20+ years in Swiss consumer goods sales: Head of Sales and Head of Product Management at Samsung Electronics Switzerland, Category Management at Migros
-- CAS AI Management, HWZ Zurich University of Applied Sciences in Business Administration (2026); thesis: a multi-agent system ("Headcount Zero")
-- Runs alcfree.ch, a Shopify shop for alcohol-free wine and spirits, largely automated with AI (product data entry reduced from 20 to 3 minutes per item, about 90% less time for inventory management)
+- Long-standing practical experience in sales, key account management, product and category management in Swiss retail, plus e-commerce
+- Competences: AI in sales and key account management, sell-out analysis, forecasting, pricing and promotion planning, e-commerce automation, AI usage policies under the Swiss Data Protection Act (DSG)
+- CAS AI Management, HWZ Zurich (2026)
 
 ## Offers (fixed prices, CHF)
 
 - KI-Startpaket: Schulung und Richtlinie (CHF 2'400, up to 12 participants, suitable for any SME team): AI usage policy oriented on the Swiss Data Protection Act (DSG), 3-hour workshop with the company's own use cases, attendance confirmation as training record, 30 days of email questions
 - Workshop "KI im Vertrieb & Key Account Management" (CHF 2'200, half day, up to 12 participants): sell-out reporting and market analysis with AI, preparing annual negotiations with retail buyers, quotes and follow-ups
-- E-Commerce-Automatisierung (from CHF 3'800): analysis plus 1–2 automations for Shopify shops (product data, inventory, customer emails) with Shopify, Make or n8n
+- E-Commerce-Automatisierung (from CHF 3'800): analysis plus 1–2 automations for Shopify shops (product data, inventory, customer emails) in the existing systems
 - Sparring for management and sales leadership: CHF 220 per hour
 - Free 30-minute potential check ("Potenzialcheck")
 - Larger integration projects: together with specialised partners
